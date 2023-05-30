@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const qrcode = require('qrcode');
-
+//hey
 // Enable CORS
 app.use(cors());
 
