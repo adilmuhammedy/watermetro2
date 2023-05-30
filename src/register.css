@@ -1,0 +1,197 @@
+.registerhead{
+  position: absolute;
+  width: 449px;
+  height: 50px;
+  left: 54px;
+  top: 70px;
+  
+  font-family: 'Akshar';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 70px;
+  letter-spacing: 0.05em;
+
+  color: #fefefe;
+}
+
+.formcontainer,
+.registerform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  width: 189px;
+  height: 70px;
+  left: 73px;
+  top: 130px;
+  font-family: 'Akshar';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 70px;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+}
+
+.name {
+  position: absolute;
+  width: 197px;
+  height: 30px;
+  left: 450px;
+  top: 20px;
+  font-family: 'Literata';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 30px;
+  letter-spacing: 0.05em;
+  color: #000000;
+}
+
+.email1 {
+  position: absolute;
+  width: 98px;
+  height: 30px;
+  left: 450px;
+  top: 90px;
+  font-family: 'Literata';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 30px;
+  letter-spacing: 0.05em;
+  color: #000000;
+}
+
+.field2 {
+    position: absolute;
+    width: 300px;
+    height: 30px;
+    left: 450px;
+    top: 50px;
+    border: none; /* Remove border */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add box-shadow */
+  }
+  
+
+
+.field3 {
+  position: absolute;
+  width: 300px;
+  height: 30px;
+  left: 450px;
+  top: 120px;
+  border-radius: 10px;
+  border: none; /* Remove border */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+ 
+  
+}
+
+.password1 {
+  position: absolute;
+  width: 176px;
+  height: 30px;
+  left: 450px;
+  top: 160px;
+  font-family: 'Literata';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 30px;
+  letter-spacing: 0.05em;
+  color: #000000;
+}
+
+
+    .field4 {
+        position:absolute;
+        width: 300px;
+        height: 30px;
+        left: 450px;
+        top: 190px;
+        border: none; /* Remove border */
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+       
+       
+      }
+      
+
+
+.conpassword {
+  position: absolute;
+  width: 189px;
+  height: 30px;
+  left: 450px;
+  top: 230px;
+  font-family: 'Literata';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 30px;
+  letter-spacing: 0.05em;
+  color: #000000;
+}
+
+.passfield2 {
+  position: absolute;
+  width: 300px;
+  height: 30px;
+  left: 450px;
+  top: 260px;
+  border: none; /* Remove border */
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+  
+.button{
+    position: absolute;
+width: 89px;
+height: 30px;
+left: 550px;
+top: 320px;
+
+font-family: 'Literata';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 30px;
+/* identical to box height */
+cursor: pointer;
+letter-spacing: 0.05em;
+
+color: #FFFFFF;
+
+border-radius: 10px;
+border-color: #44C0AA;
+border-width: 0px;
+
+background-color: #44C0AA;
+}
+.user{
+    position: absolute;
+    width: 200px;
+    height: 24px;
+    left: 565px;
+    top: 490px;
+    cursor: pointer;
+    font-family: 'Literata';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 24px;
+    /* identical to box height */
+    border-color: #FFFFFF;
+    background-color: #FFFFFF;
+    border-width: 0px;
+    
+    letter-spacing: 0.02em;
+    
+    color: #000000;
+    
+    }
+    
+

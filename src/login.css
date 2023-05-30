@@ -1,0 +1,292 @@
+.loginhead{
+    position: absolute;
+    width: 449px;
+    height: 50px;
+    left: 54px;
+    top: 70px;
+    
+    font-family: 'Akshar';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 70px;
+    letter-spacing: 0.05em;
+
+    color: #fefefe;
+}
+
+.formcontainer,.loginform{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        position: absolute;
+width: 189px;
+height: 70px;
+left: 73px;
+top: 120px;
+
+font-family: 'Akshar';
+font-style: normal;
+font-weight: 700;
+font-size: 50px;
+line-height: 70px;
+letter-spacing: 0.05em;
+
+
+color: #FFFFFF;
+        
+        
+}
+.email{
+    position: absolute;
+width: 197px;
+height: 30px;
+left: 450px;
+top: 20px;
+
+font-family: 'Literata';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 30px;
+/* identical to box height */
+
+letter-spacing: 0.05em;
+
+color: #000000;
+}
+.password{
+    position: absolute;
+width: 98px;
+height: 30px;
+left: 450px;
+top: 100px;
+
+font-family: 'Literata';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 30px;
+/* identical to box height */
+
+letter-spacing: 0.05em;
+
+color: #000000;
+
+}
+.field{
+    position: absolute;
+width: 280px;
+height: 30px;
+left: 450px;
+top: 60px;
+border: none; /* Remove border */
+border-radius: 10px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+
+}
+.field1{
+    position: absolute;
+    width: 280px;
+    height: 30px;
+    left: 450px;
+    top: 140px;
+    border: none; /* Remove border */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.submit{
+    position: absolute;
+width: 89px;
+height: 30px;
+left: 550px;
+top: 200px;
+cursor: pointer;
+font-family: 'Literata';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 30px;
+/* identical to box height */
+border-radius: 10px;
+border-color: #44C0AA;
+letter-spacing: 0.05em;
+
+color: #faf9f9;
+border-width: 0px;
+
+background-color: #44C0AA;
+}
+.noaccount{
+    position: absolute;
+width: 200px;
+height: 24px;
+left: 565px;
+top: 370px;
+cursor: pointer;
+font-family: 'Literata';
+font-style: normal;
+font-weight: 300;
+font-size: 13px;
+line-height: 24px;
+/* identical to box height */
+border-color: #FFFFFF;
+background-color: #FFFFFF;
+border-width: 0px;
+
+letter-spacing: 0.02em;
+
+color: #000000;
+
+}
+.noaccount {
+  position: absolute;
+  width: 200px;
+  height: 24px;
+  left: 565px;
+  top: 370px;
+  cursor: pointer;
+  font-family: 'Literata';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 24px;
+  /* identical to box height */
+  border-color: #FFFFFF;
+  background-color: #FFFFFF;
+  border-width: 0px;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+
+.or {
+  position: absolute;
+  top: 404px; /* Adjust the top value to center it properly */
+  left: 565px;
+  width: 200px;
+  text-align: center;
+}
+
+.or-line {
+  display: inline-block;
+  width: 50%;
+  border-top: 1px solid rgb(39, 38, 38);
+  margin-top: 10px;
+}
+  
+  .google {
+    position: absolute;
+    background-color: #4285F4;
+    color: #ffffff;
+    border-radius: 4px;
+    border: none;
+    left: 560px;
+    top: 450px;
+    width:200px;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .google:hover,
+  .google:focus {
+    background-color: #d3bc89;
+    /* Add more styles for hover and focus states */
+    color: #fff;
+    /* Additional styles */
+    border-radius: 4px;
+  }
+  
+  .google .google-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    background-image: url("https://www.dropbox.com/s/y76omky5qwkj7fw/google-logo.png?dl=0");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  
+
+  /* DropdownButton.css */
+
+.dropdown {
+  position: absolute;
+  display: inline-block;
+  top:20px;
+  left: 1450px;
+  
+}
+
+button {
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 50px;
+  right: -50px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 5px;
+  width:130px;
+  list-style-type:none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-menu li {
+  padding: 8px 12px;
+  cursor: pointer;
+  border-color: #000000;
+  box-sizing: border-box;
+  border-width: 5px;;
+}
+
+.dropdown-menu li:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown-menu li {
+  padding: 8px 12px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.dropdown-menu li:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}
+
+.dropdown-menu li:hover {
+  background-color: #f0f0f0;
+}
+.avatar {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top:-8px;
+  left: -0px;
+  border-radius: 50%;
+}
+.welcome-message{
+  position: absolute;
+  left:-210px;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 19px;
+  width:300px;
+}
+  
+  

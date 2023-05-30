@@ -1,0 +1,260 @@
+.Home {
+  position: absolute;
+  width: 80%; /* Adjust the width as per your requirement */
+  height: 100%;
+  margin: 0 auto; /* Center the page horizontally */
+}
+
+
+.home{
+
+  font-size: 150px;
+  position: relative;
+  left: 800px;
+  color: black;
+  top:10px;
+  display: inline-block;
+  cursor: pointer;
+  
+  
+}
+
+.booktickets{
+  color: black;
+  font-size: 15px;
+  position: relative;
+  left: 850px;
+  top:10px;
+  display: inline-block;
+  cursor: pointer;
+}
+.terminals{
+  color: black;
+  font-size: 15px;
+  position: relative;
+  left: 900px;
+  top:10px;
+  display: inline-block;
+  cursor: pointer;
+}
+.faredetails{
+  color: black;
+  font-size: 15px;
+  position: relative;
+  left: 950px;
+  top:10px;
+  display: inline-block;
+  cursor: pointer;
+}
+.logo{
+  position: absolute;
+width: 130px;
+height: 130px;
+left: 20px;
+top: -26px;
+}
+.login{
+  color: black;
+  font-size: 15px;
+  position: relative;
+  left: 1000px;
+  top:10px;
+  display: inline-block;
+  cursor: pointer;
+}
+.rectangle {
+  position: relative; /* Change from absolute to relative */
+  width: 180px;
+  height: 100px;
+  margin-left: auto; /* Add margin-left and margin-right with auto */
+  margin-right: auto;
+  top: 80px;
+  background: #44C0AA;
+  
+}
+.homepagee{
+  position: relative;
+  top:120px;
+  width:750px;
+}
+.metro{
+  position:relative;
+  left:30px;
+  color:#44C0AA;
+  font:inherit;
+  font-size: 22px;
+  font-family: 'Lato', sans-serif;
+
+  text-shadow: #0d0f0f;
+
+}
+.heading{
+  position:relative;
+  left:30px;
+  color:#1289c0;
+  font:inherit;
+  font-family: 'Lato', sans-serif;
+
+  top:-20px;
+  width:550px;
+  font-size: 1.675rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  
+
+}
+.descri{
+  position: relative;
+  top:-30px;
+  left:30px;
+  width:650px;
+  font-size: 18px;
+  line-height: 30px;
+}
+.boat{
+  position:absolute;
+  width:800px;
+  height:100px;
+  top:230px;
+  left:100px;
+  text-shadow: #0d0f0f;
+  color:#1289c0;
+  font-size: 28px;background: linear-gradient(180deg, #0660b4, #15bbb0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+
+}
+.route{
+  position:absolute;
+  width:100px;
+  height:100px;
+  top:230px;
+  left:250px;
+  text-shadow: #0d0f0f;
+  color:#1289c0;
+  font-size: 28px;
+  background: linear-gradient(140deg, #065cad, #15bbb0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.kms{
+  position:absolute;
+  width:160px;
+  height:100px;
+  top:230px;
+  left:400px;
+  text-shadow: #0d0f0f;
+  color:#1289c0;
+  font-size: 28px;
+  background: linear-gradient(140deg, #04539d, #15bbb0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+   
+
+  
+}
+
+.slide-container {
+  position: relative;
+  width: 60%;
+  height:440px;
+  left:245px;
+  float:right;
+  margin-top: -155px;
+  border-radius: 20px;
+}
+
+.slide-container .each-slide {
+  display: flex;
+  align-items: right;
+  justify-content: right;
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+}
+
+.wave-animation {
+  position: absolute;
+  top: 643px;
+  left: 0;
+  width: 1540px;
+  height: 53px;
+  overflow: hidden;
+}
+
+.wave-animation path {
+  fill: #2577cf81;
+  animation: waveFlow 3s linear infinite;
+}
+
+@keyframes waveFlow {
+  0% {
+    transform: translateX(-35px);
+  }
+  50% {
+    transform: translateX(35px);
+  }
+  100% {
+    transform: translateX(-35px);
+  }
+}
+
+.wave-animation2 {
+  position: absolute;
+  top: 643px;
+  left: 0;
+  width: 1540px;
+  height: 53px;
+  overflow: hidden;
+}
+
+.wave-animation2 path {
+  fill: #2e7ed378;
+  animation: waveFlow2 8s linear infinite;
+}
+
+@keyframes waveFlow2 {
+  0% {
+    transform: translateX(40px);
+  }
+  50% {
+    transform: translateX(-40px);
+  }
+  100% {
+    transform: translateX(40px);
+  }
+}
+.wave-animation3 {
+  position: absolute;
+  top: 643px;
+  left: 0;
+  width: 1540px;
+  height: 53px;
+  overflow: hidden;
+}
+
+.wave-animation3 path {
+  fill: #2e7ed37a;
+  animation: waveFlow2 5s linear infinite;
+}
+
+@keyframes waveFlow2 {
+  0% {
+    transform: translateX(40px);
+  }
+  50% {
+    transform: translateX(-40px);
+  }
+  100% {
+    transform: translateX(40px);
+  }
+}
+
+.welcome-message{
+  position:absolute;
+  width:200px;
+  right:10px;
+  top:100px;
+}
+

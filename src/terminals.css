@@ -1,0 +1,139 @@
+.rect2{
+position: absolute;
+width: 1100px;
+height: 220px;
+left: 200px;
+top: 202px;
+
+border: none; /* Remove border */
+border-radius: 10px;
+box-shadow: 0 2px 5px rgba(5, 5, 5, 0.3);
+}
+
+.kakkanad{
+    color: rgb(12, 12, 12);
+    font-size: 15px;
+    position:absolute;
+    left: 116px;
+    top:170px;
+    display: inline-block;
+    
+}
+
+.imgkakkanad-img{
+    position: absolute;
+    width: 220px;
+    height: 150px;
+    left: 50px;
+    top: 30px;
+    border-radius: 15px;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.vyttila{
+    color: rgb(8, 7, 7);
+    font-size: 15px;
+    position: absolute;
+    left: 390px;
+    top:170px;
+    display: inline-block;
+}
+.imgvyttila{
+    position: absolute;
+    width: 220px;
+    height: 150px;
+    left: 320px;
+    top: 30px;
+    border-radius: 15px;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.highcourt{
+    color: rgb(9, 9, 9);
+    font-size: 15px;
+    position: absolute;
+    left: 630px;
+    top:170px;
+    display: inline-block;
+}
+
+.imghighcourt{
+    position: absolute;
+    width: 220px;
+    height: 150px;
+    left: 580px;
+    top: 30px;
+    border-radius: 15px;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.vypin{
+    color: rgb(6, 6, 6);
+    font-size: 15px;
+    position: absolute;
+    left: 900px;
+    top:170px;
+    display: inline-block;
+}
+.imgvypin{
+    position: absolute;
+    width: 220px;
+    height: 150px;
+    left: 830px;
+    top: 30px;
+    border-radius: 15px;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.terminal2{
+    position: absolute;
+    top:200px;
+}
+.t1{
+    position: relative;
+    top: 10px;
+    font-weight: 600;
+    color:#1289c0;
+    font-size: 28px;
+    background: linear-gradient(180deg, #0660b4, #15bbb0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.kak{
+    position: relative;
+    color: #070707;
+    font-weight:  600;
+    font-size: 17px;
+    height: 18px;
+    padding-top: 2px;
+}
+.loc{
+    position: relative;
+    font-size: 17px;
+    top:5px;
+    font-style: oblique;
+}
+.loc1{
+    position: relative;
+    font-size: 17px;
+    top:20px;
+    font-style: oblique;
+}
+.descrip{
+    position:relative;
+    font-size: 15px;
+    letter-spacing: 0.1px;
+}
+
