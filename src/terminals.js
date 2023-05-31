@@ -1,6 +1,6 @@
 import React,  {useState, useEffect,useRef  } from 'react';
 import { useHistory } from 'react-router-dom';
-import { GoogleMap, DirectionsService, DirectionsRenderer } from '@react-google-maps/api';
+//import { GoogleMap, DirectionsService, DirectionsRenderer } from '@react-google-maps/api';
 import './terminals.css';
 //import logo from './images/logo.png';
 //import kakkanad from './images/kakkanad.webp';
@@ -94,18 +94,17 @@ const Terminals = () => {
 
   const [activeTerminal, setActiveTerminal] = useState(null);
 
-  const handleScroll = (event) => {
-    event.preventDefault();
-
-    const scrollAmount = event.deltaY;
-    const currentPosition = scrollContainerRef.current.scrollLeft;
-
-    scrollContainerRef.current.scrollTo({
-      left: currentPosition + scrollAmount,
-      behavior: 'smooth'
-    });
+  const scrollLeft = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollLeft -= 300; // Adjust the scroll amount as per your requirement
+    }
   };
 
+  const scrollRight = () => {
+    if (scrollContainerRef.current) {
+       scrollContainerRef.current.scrollLeft += 300; // Adjust the scroll amount as per your requirement
+    }
+  };
   
 
   const handleHomeClick = () => {
@@ -207,11 +206,13 @@ const Terminals = () => {
             <img src='https://dl.dropboxusercontent.com/s/fl5x2cngjqgnypa/vytila.jpg?dl=0' className="imgkakka" alt="vyttila"/>
             <h3 className='nearby'>Nearby Attractions</h3>
             <p className='attractions'>Discover nearby attractions, create memorable experiences, and embark on unforgettable adventures</p>
-      
-            <div className="scroll-container" onWheel={handleScroll} ref={scrollContainerRef}>
-      <div className="scroll-content">
+            <div className="container" ref={scrollContainerRef}>
+            <div className="scroll-buttons">
+        <button onClick={scrollLeft}>Scroll Left</button>
+        <button onClick={scrollRight}>Scroll Right</button>
+      </div>
     <div className='rect1'>      
-    <img src='https://dl.dropboxusercontent.com/s/xs6xzm2h7rqoy42/vyttila1.jpg?dl=0' className='k1' alt='k1'/>
+    <img src='https://dl.dropboxusercontent.com/s/xs6xzm2h7rqoy42/vyttila1.jpg?dl=0' className='k1' alt='k11'/>
     <h5 className='placce1'>Edappally</h5>
     <h3 className='locca1'>Lulu Mall</h3>
     <p className='dessc1'>Shopping Mall</p>
@@ -244,7 +245,7 @@ const Terminals = () => {
   </div>
  
 </div>
-</div>
+
           
         );
       case 'highcourt':
@@ -257,41 +258,54 @@ const Terminals = () => {
             <img src="https://dl.dropboxusercontent.com/s/07g29unxg2j6qjo/high-court.jpg?dl=0"  className="imgkakka" alt="highcourt"/>
             <h3 className='nearby'>Nearby Attractions</h3>
             <p className='attractions'>Discover nearby attractions, create memorable experiences, and embark on unforgettable adventures</p>
-            <div className="container">
-            <div className='recttt'>
- 
+            <div className="container4">
+              <div className='cont'>
+            <div className='rect1'> 
     <img src='https://dl.dropboxusercontent.com/s/eaq8mi2rmfex6br/highcourt1.jpg?dl=0' className='k1' alt='k1'/>
+    <h5 className='placce1'>Marine Drive</h5>
+    <h3 className='locca1'>Kerala High Court</h3>
+    <p className='dessc1'>Court</p>
+    </div>
+    <div className='rect8'> 
     <img src='https://dl.dropboxusercontent.com/s/53qjjf2hsv99azc/high2.jpg?dl=0' className='k2' alt='k2'/>
+    <h5 className='placce2'>Kochi</h5>
+    <h3 className='locca2'>Marine Drive</h3>
+    <p className='dessc2'>Tourist Attraction</p>
+    </div>
+    <div className='rect3'> 
     <img src='https://dl.dropboxusercontent.com/s/hcj00uvijhdct3d/high3.jpg?dl=0' className='k3' alt='k3'/>
+    <h5 className='placce3'>Bolgatty</h5>
+    <h3 className='locca3'>Bolgatty Palace</h3>
+    <p className='dessc3'>Palace</p>
+    </div>
+    <div className='rect4'> 
     <img src='https://dl.dropboxusercontent.com/s/jux30a9pqamoni8/high4.jpg?dl=0' className='k4' alt='k4'/>
+    <h5 className='placce4'>Marine drive</h5>
+    <h3 className='locca4'>Rainbow Bridge</h3>
+    <p className='dessc4'>Tourist Attraction</p>
+    </div>
+    <div className='rect5'> 
     <img src='https://dl.dropboxusercontent.com/s/fixyu3wj2nvbsvm/high5.jpg?dl=0' className='k5' alt='k5'/>
+    <h5 className='placce5'>Marine Drive</h5>
+    <h3 className='locca5'>Broadway Market</h3>
+    <p className='dessc5'>Market</p>
+    </div>
+    <div className='rect6'> 
     <img src='https://dl.dropboxusercontent.com/s/sg2u9uezfv6rola/high6.jpg?dl=0' className='k6' alt='k6'/>
+    <h5 className='placce6'>Kochi</h5>
+    <h3 className='locca6'>Mattancherry</h3>
+    <p className='dessc6'>Iconic Place</p>
+    </div>
+    <div className='rect7'> 
     <img src='https://dl.dropboxusercontent.com/s/qhy09c0ijmyvivu/high7.jpg?dl=0' className='k7' alt='k7'/>
-  
-  <h5 className='placce1'>Marine Drive</h5>
-  <h3 className='locca1'>Kerala High Court</h3>
-  <p className='dessc1'>Court</p>
-  <h5 className='placce2'>Kochi</h5>
-  <h3 className='locca2'>Marine Drive</h3>
-  <p className='dessc2'>Tourist Attraction</p>
-  <h5 className='placce3'>Bolgatty</h5>
-  <h3 className='locca3'>Bolgatty Palace</h3>
-  <p className='dessc3'>Palace</p>
-  <h5 className='placce4'>Marine drive</h5>
-  <h3 className='locca4'>Rainbow Bridge</h3>
-  <p className='dessc4'>Tourist Attraction</p>
-  <h5 className='placce5'>Marine Drive</h5>
-  <h3 className='locca5'>Broadway Market</h3>
-  <p className='dessc5'>Market</p>
-  <h5 className='placce6'>Kochi</h5>
-  <h3 className='locca6'>Mattancherry</h3>
-  <p className='dessc6'>Iconic Place</p>
-  <h5 className='placce7'>Fort Kochi</h5>
-  <h3 className='locca7'>Chinese Fishing Nets</h3>
-  <p className='dessc7'>Tourist Attraction</p>
-  </div>
+    <h5 className='placce7'>Fort Kochi</h5>
+    <h3 className='locca7'>Chinese Fishing Nets</h3>
+    <p className='dessc7'>Tourist Attraction</p>
+    </div> 
+ </div>
 </div>
-          </div>
+</div>
+       
         );
       case 'vypin':
         return (
@@ -303,25 +317,33 @@ const Terminals = () => {
             <img src='https://dl.dropboxusercontent.com/s/2bqz81uew9ja73l/vypin.webp?dl=0' className="imgkakka" alt="vypin"/>
             <h3 className='nearby'>Nearby Attractions</h3>
             <p className='attractions'>Discover nearby attractions, create memorable experiences, and embark on unforgettable adventures</p>
-            <div className="container">
+            <div className="container4">
             <div className='recttt'>
+            <div className='rect1'> 
     <img src='https://dl.dropboxusercontent.com/s/q66dfowhcybzse2/vypin1.jpg?dl=0' className='k1' alt='k1'/>
+    <h5 className='placce1'>Vypin Island</h5>
+    <h3 className='locca1'>Cherai Beach</h3>
+    <p className='dessc1'>Beach</p>
+    </div>
+    <div className='rect8'> 
     <img src='https://dl.dropboxusercontent.com/s/a6lvtcngsw2ac7v/vypin2.webp?dl=0' className='k2' alt='k2'/>
+    <h5 className='placce2'>Puthuvype</h5>
+    <h3 className='locca2'>Puthuvype Lighthouse</h3>
+    <p className='dessc2'>Light House</p>
+    </div>
+    <div className='rect3'> 
     <img src='https://dl.dropboxusercontent.com/s/pnbcjqd5detqyag/vypin3.jpg?dl=0' className='k3' alt='k3'/>
+    <h5 className='placce3'>Vypin</h5>
+    <h3 className='locca3'>Kuzhupilly Beach</h3>
+    <p className='dessc3'>Beach</p>
+    </div>
+    <div className='rect4'> 
     <img src='https://dl.dropboxusercontent.com/s/stgki9v81qalb2d/vypin4.jpg?dl=0' className='k4' alt='k4'/>
-  
-  <h5 className='placce1'>Vypin Island</h5>
-  <h3 className='locca1'>Cherai Beach</h3>
-  <p className='dessc1'>Beach</p>
-  <h5 className='placce2'>Puthuvype</h5>
-  <h3 className='locca2'>Puthuvype Lighthouse</h3>
-  <p className='dessc2'>Light House</p>
-  <h5 className='placce3'>Vypin</h5>
-  <h3 className='locca3'>Kuzhupilly Beach</h3>
-  <p className='dessc3'>Beach</p>
-  <h5 className='placce4'>Vypin</h5>
-  <h3 className='locca4'>Chendamangalam Synagogue</h3>
-  <p className='dessc4'>Synagogue</p>
+    <h5 className='placce4'>Vypin</h5>
+    <h3 className='locca4'>Chendamangalam Synagogue</h3>
+    <p className='dessc4'>Synagogue</p>
+    </div>
+
   </div>
 </div>
           </div>
