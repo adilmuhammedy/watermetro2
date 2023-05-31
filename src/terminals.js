@@ -260,7 +260,7 @@ const Terminals = () => {
             <img src="https://dl.dropboxusercontent.com/s/07g29unxg2j6qjo/high-court.jpg?dl=0"  className="imgkakka" alt="highcourt"/>
             <h3 className='nearby'>Nearby Attractions</h3>
             <p className='attractions'>Discover nearby attractions, create memorable experiences, and embark on unforgettable adventures</p>
-            <div className="container" ref={containerRef}>
+            <div className="container">
               <div className='cont1'>
             <div className='item'> 
     <img src='https://dl.dropboxusercontent.com/s/eaq8mi2rmfex6br/highcourt1.jpg?dl=0' className='h11' alt='k1'/>
