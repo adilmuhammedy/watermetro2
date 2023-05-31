@@ -1,5 +1,6 @@
-import React,  {useState, useEffect,useRef  } from 'react';
+import React,  {useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
+
 //import { GoogleMap, DirectionsService, DirectionsRenderer } from '@react-google-maps/api';
 import './terminals.css';
 //import logo from './images/logo.png';
@@ -32,6 +33,9 @@ import firebase from 'firebase/compat/app';
 //import vy2 from './images/vypin2.webp';
 //import vy3 from './images/vypin3.jpg';
 //import vy4 from './images/vypin4.jpg';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import the carousel styles
+import { Carousel } from "react-responsive-carousel"; // Import the Carousel component
+
 
 
 const Terminals = () => {
@@ -39,7 +43,7 @@ const Terminals = () => {
   const [displayName, setDisplayName] = useState('');
   const [isUserSignedIn, setIsUserSignedIn] = useState(false);
   const [isOpen, setIsOpen] = useState(false)
-  const scrollContainerRef = useRef(null);
+  
  
     
 
@@ -94,17 +98,7 @@ const Terminals = () => {
 
   const [activeTerminal, setActiveTerminal] = useState(null);
 
-  const scrollLeft = () => {
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollLeft -= 300; // Adjust the scroll amount as per your requirement
-    }
-  };
-
-  const scrollRight = () => {
-    if (scrollContainerRef.current) {
-       scrollContainerRef.current.scrollLeft += 300; // Adjust the scroll amount as per your requirement
-    }
-  };
+  
   
 
   const handleHomeClick = () => {
@@ -135,6 +129,7 @@ const Terminals = () => {
     switch (activeTerminal) {
       case 'kakkanad':
         return (
+
           <div className='terminal2'>
             <h3 className='t1'>KAKKANAD </h3>
             <p className='kak'>Kakkanad is a rapidly developing city known for its IT and industrial parks</p>
@@ -146,52 +141,53 @@ const Terminals = () => {
            <p className='attractions'>Discover nearby attractions, create memorable experiences, and embark on unforgettable adventures</p>
           
           
-            
-           <div className='rect1'>   
+            <Carousel showArrows={true} infiniteLoop={true} width={1280} emulateTouch={true}>
+            <div className="carousel-container">
+           <div className="carousel-item">   
     <img src='https://dl.dropboxusercontent.com/s/vrcbago8ldalwzg/kakkanad1.jpg?dl=0' className='k1' alt='k1'/>
     
     <h5 className='placce1'>Kakkanad</h5>
     <h3 className='locca1'>Kakkanad Info Park</h3>
     <p className='dessc1'>Largest IT park in Kerala</p>
     </div>
-    <div className='rect8'>   
+    <div className="carousel-item">   
     <img src='https://dl.dropboxusercontent.com/s/jakshzs8o2cprxu/kakkanad2.jpg?dl=0' className='k2' alt='k2'/>
     
     <h5 className='placce2'>Pallikara</h5>
     <h3 className='locca2'>Wonderla</h3>
     <p className='dessc2'>Amusement Parks</p>
     </div>
-    <div className='rect3'>   
+    <div className="carousel-item">   
     <img src='https://dl.dropboxusercontent.com/s/lx7cr3he4axept7/kakkanad3.jpg?dl=0' className='k3' alt='k3'/>
       
     <h5 className='placce3'>Thrippunithara</h5>
     <h3 className='locca3'>Hill Palace Museum</h3>
     <p className='dessc3'>Museum</p>
     </div>
-    <div className='rect4'>   
+    <div className="carousel-item">   
     <img src='https://dl.dropboxusercontent.com/s/k7ag2bfhay0z3rn/kakkanad4.jpg?dl=0' className='k4' alt='k4'/>
     <h5 className='placce4'>Kochi</h5>
     <h3 className='locca4'>Mangalavanam Bird Sanctuary</h3>
     <p className='dessc4'>Tourist Attraction</p>
     </div>
-    <div className='rect5'>   
+    <div className="carousel-item">   
     <img src='https://dl.dropboxusercontent.com/s/tu60i4xa02d4z9d/kakkanad5.jpg?dl=0' className='k5' alt='k5'/>
     
     <h5 className='placce5'>Kochi</h5>
     <h3 className='locca5'>Kadambrayar Eco Tourism</h3>
     <p className='dessc5'>Tourist Attraction</p>
     </div>
-    <div className='rect6'>   
+    <div className="carousel-item">   
     <img src='https://dl.dropboxusercontent.com/s/g3huekwstkv3bmd/kakkanad6.jpg?dl=0' className='k6' alt='k6'/>
     
     <h5 className='placce6'>Kakkanad</h5>
     <h3 className='locca6'>Cochin Special Economic zone</h3>
     <p className='dessc6'>Economic Zone</p>
     </div>
-    
+    </div>
+    </Carousel>
 
- 
-</div>
+ </div>
 
           
    
@@ -206,11 +202,7 @@ const Terminals = () => {
             <img src='https://dl.dropboxusercontent.com/s/fl5x2cngjqgnypa/vytila.jpg?dl=0' className="imgkakka" alt="vyttila"/>
             <h3 className='nearby'>Nearby Attractions</h3>
             <p className='attractions'>Discover nearby attractions, create memorable experiences, and embark on unforgettable adventures</p>
-            <div className="container" ref={scrollContainerRef}>
-            <div className="scroll-buttons">
-        <button onClick={scrollLeft}>Scroll Left</button>
-        <button onClick={scrollRight}>Scroll Right</button>
-      </div>
+            <div className='container'>
     <div className='rect1'>      
     <img src='https://dl.dropboxusercontent.com/s/xs6xzm2h7rqoy42/vyttila1.jpg?dl=0' className='k1' alt='k11'/>
     <h5 className='placce1'>Edappally</h5>
