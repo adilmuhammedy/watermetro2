@@ -40,6 +40,8 @@ const Terminals = () => {
   const [isUserSignedIn, setIsUserSignedIn] = useState(false);
   const [isOpen, setIsOpen] = useState(false)
   const scrollContainerRef = useRef(null);
+  const containerRef = useRef(null);
+  const [scrollPosition, setScrollPosition] = useState(0);
  
     
 
@@ -130,6 +132,11 @@ const Terminals = () => {
   const handleTerminalClick = (terminal) => {
     setActiveTerminal(terminal);
   };
+
+    
+
+
+
  
   const renderTerminalDetails = () => {
     switch (activeTerminal) {
@@ -258,55 +265,60 @@ const Terminals = () => {
             <img src="https://dl.dropboxusercontent.com/s/07g29unxg2j6qjo/high-court.jpg?dl=0"  className="imgkakka" alt="highcourt"/>
             <h3 className='nearby'>Nearby Attractions</h3>
             <p className='attractions'>Discover nearby attractions, create memorable experiences, and embark on unforgettable adventures</p>
-            <div className="container4">
-              <div className='cont'>
-            <div className='rect1'> 
-    <img src='https://dl.dropboxusercontent.com/s/eaq8mi2rmfex6br/highcourt1.jpg?dl=0' className='k1' alt='k1'/>
+            <div className="container" ref={containerRef}>
+              <div className='cont1'>
+            <div className='item'> 
+    <img src='https://dl.dropboxusercontent.com/s/eaq8mi2rmfex6br/highcourt1.jpg?dl=0' className='h11' alt='k1'/>
     <h5 className='placce1'>Marine Drive</h5>
     <h3 className='locca1'>Kerala High Court</h3>
     <p className='dessc1'>Court</p>
     </div>
-    <div className='rect8'> 
-    <img src='https://dl.dropboxusercontent.com/s/53qjjf2hsv99azc/high2.jpg?dl=0' className='k2' alt='k2'/>
+    <div className='item'> 
+    <img src='https://dl.dropboxusercontent.com/s/53qjjf2hsv99azc/high2.jpg?dl=0' className='h12' alt='k2'/>
     <h5 className='placce2'>Kochi</h5>
     <h3 className='locca2'>Marine Drive</h3>
     <p className='dessc2'>Tourist Attraction</p>
     </div>
-    <div className='rect3'> 
-    <img src='https://dl.dropboxusercontent.com/s/hcj00uvijhdct3d/high3.jpg?dl=0' className='k3' alt='k3'/>
+    <div className='item'> 
+    <img src='https://dl.dropboxusercontent.com/s/hcj00uvijhdct3d/high3.jpg?dl=0' className='h13' alt='k3'/>
     <h5 className='placce3'>Bolgatty</h5>
     <h3 className='locca3'>Bolgatty Palace</h3>
     <p className='dessc3'>Palace</p>
     </div>
-    <div className='rect4'> 
-    <img src='https://dl.dropboxusercontent.com/s/jux30a9pqamoni8/high4.jpg?dl=0' className='k4' alt='k4'/>
+    <div className='item'> 
+    <img src='https://dl.dropboxusercontent.com/s/jux30a9pqamoni8/high4.jpg?dl=0' className='h14' alt='k4'/>
     <h5 className='placce4'>Marine drive</h5>
     <h3 className='locca4'>Rainbow Bridge</h3>
     <p className='dessc4'>Tourist Attraction</p>
     </div>
-    <div className='rect5'> 
-    <img src='https://dl.dropboxusercontent.com/s/fixyu3wj2nvbsvm/high5.jpg?dl=0' className='k5' alt='k5'/>
+    <div className='item'> 
+    <img src='https://dl.dropboxusercontent.com/s/fixyu3wj2nvbsvm/high5.jpg?dl=0' className='h15' alt='k5'/>
     <h5 className='placce5'>Marine Drive</h5>
     <h3 className='locca5'>Broadway Market</h3>
     <p className='dessc5'>Market</p>
     </div>
-    <div className='rect6'> 
-    <img src='https://dl.dropboxusercontent.com/s/sg2u9uezfv6rola/high6.jpg?dl=0' className='k6' alt='k6'/>
+    <div className='item'> 
+    <img src='https://dl.dropboxusercontent.com/s/sg2u9uezfv6rola/high6.jpg?dl=0' className='h16' alt='k6'/>
     <h5 className='placce6'>Kochi</h5>
     <h3 className='locca6'>Mattancherry</h3>
     <p className='dessc6'>Iconic Place</p>
     </div>
-    <div className='rect7'> 
-    <img src='https://dl.dropboxusercontent.com/s/qhy09c0ijmyvivu/high7.jpg?dl=0' className='k7' alt='k7'/>
+    <div className='item'> 
+    <img src='https://dl.dropboxusercontent.com/s/qhy09c0ijmyvivu/high7.jpg?dl=0' className='h17' alt='k7'/>
     <h5 className='placce7'>Fort Kochi</h5>
     <h3 className='locca7'>Chinese Fishing Nets</h3>
     <p className='dessc7'>Tourist Attraction</p>
     </div> 
+    <div className="left-button" >&lt;</div>
+    <div className="right-button" >&gt;</div>
+
  </div>
 </div>
 </div>
+
        
         );
+      
       case 'vypin':
         return (
           <div className='terminal2'> 
@@ -317,27 +329,27 @@ const Terminals = () => {
             <img src='https://dl.dropboxusercontent.com/s/2bqz81uew9ja73l/vypin.webp?dl=0' className="imgkakka" alt="vypin"/>
             <h3 className='nearby'>Nearby Attractions</h3>
             <p className='attractions'>Discover nearby attractions, create memorable experiences, and embark on unforgettable adventures</p>
-            <div className="container4">
+            <div className="container">
             <div className='recttt'>
-            <div className='rect1'> 
+            <div className='item'> 
     <img src='https://dl.dropboxusercontent.com/s/q66dfowhcybzse2/vypin1.jpg?dl=0' className='k1' alt='k1'/>
     <h5 className='placce1'>Vypin Island</h5>
     <h3 className='locca1'>Cherai Beach</h3>
     <p className='dessc1'>Beach</p>
     </div>
-    <div className='rect8'> 
+    <div className='item'> 
     <img src='https://dl.dropboxusercontent.com/s/a6lvtcngsw2ac7v/vypin2.webp?dl=0' className='k2' alt='k2'/>
     <h5 className='placce2'>Puthuvype</h5>
     <h3 className='locca2'>Puthuvype Lighthouse</h3>
     <p className='dessc2'>Light House</p>
     </div>
-    <div className='rect3'> 
+    <div className='item'> 
     <img src='https://dl.dropboxusercontent.com/s/pnbcjqd5detqyag/vypin3.jpg?dl=0' className='k3' alt='k3'/>
     <h5 className='placce3'>Vypin</h5>
     <h3 className='locca3'>Kuzhupilly Beach</h3>
     <p className='dessc3'>Beach</p>
     </div>
-    <div className='rect4'> 
+    <div className='item'> 
     <img src='https://dl.dropboxusercontent.com/s/stgki9v81qalb2d/vypin4.jpg?dl=0' className='k4' alt='k4'/>
     <h5 className='placce4'>Vypin</h5>
     <h3 className='locca4'>Chendamangalam Synagogue</h3>
@@ -352,6 +364,7 @@ const Terminals = () => {
         return null;
     }
   };
+
 
   return (
     <div className="Home">
@@ -412,6 +425,6 @@ const Terminals = () => {
     </div>
   );
 
-};
+}
 
 export default Terminals;
