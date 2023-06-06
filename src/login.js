@@ -185,7 +185,10 @@ const Login = () => {
           />
           <button className="submit" type="submit">Log In</button>
         </form>
-        <p className="or"><span className="or-line">OR</span></p>
+        <p className="or">
+  <span className="or-line"></span>
+  <span className="or-text">OR</span>
+</p>
         <button className="noaccount" onClick={handleRegisterClick}>New User? Register here</button>
         <button className="google" onClick={handleGoogleLogin}>
           <span className="google-icon"></span>
