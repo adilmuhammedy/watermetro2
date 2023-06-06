@@ -1,41 +1,9 @@
 import React,  {useState, useEffect ,useRef} from 'react';
 import { useHistory } from 'react-router-dom';
-
-//import { GoogleMap, DirectionsService, DirectionsRenderer } from '@react-google-maps/api';
 import './terminals.css';
-//import logo from './images/logo.png';
-//import kakkanad from './images/kakkanad.webp';
-//import vypin from './images/vypin.webp';
-//import vyttila from './images/vytila.jpg';
 import { getAuth,onAuthStateChanged, signOut } from "firebase/auth";
 import 'firebase/compat/auth';
 import firebase from 'firebase/compat/app';
-//import avatar from './avatar.png'; 
-//import k1 from './images/kakkanad1.jpg';                     
-//import k2 from './images/kakkanad2.jpg';
-//import k3 from './images/kakkanad3.jpg';
-//import k4 from './images/kakkanad4.jpg';
-//import k5 from './images/kakkanad5.jpg';
-//import k6 from './images/kakkanad6.jpg';
-//import v1 from './images/vyttila1.jpg';
-//import v2 from './images/vyttila2.jpg';
-//import v3 from './images/vyttila3.jpg';
-//import v4 from './images/vyttila4.jpg';
-//import v5 from './images/vyttila5.jpg';
-//import h1 from './images/highcourt1.jpg';
-//import h2 from './images/high2.jpg';
-//import h3 from './images/high3.jpg';
-//import h4 from './images/high4.jpg';
-//import h5 from './images/high5.jpg';
-//import h6 from './images/high6.jpg';
-//import h7 from './images/high7.jpg';
-//import vy1 from './images/vypin1.jpg';
-//import vy2 from './images/vypin2.webp';
-//import vy3 from './images/vypin3.jpg';
-//import vy4 from './images/vypin4.jpg';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import the carousel styles
-import { Carousel } from "react-responsive-carousel"; // Import the Carousel component
-
 
 
 const Terminals = () => {
@@ -43,13 +11,7 @@ const Terminals = () => {
   const [displayName, setDisplayName] = useState('');
   const [isUserSignedIn, setIsUserSignedIn] = useState(false);
   const [isOpen, setIsOpen] = useState(false)
-  
   const containerRef = useRef(null);
- 
- 
-    
-
-
   useEffect(() => {
     const firebaseConfig = {
       apiKey: "AIzaSyCGRG2r6MT-CoPN1d-UVrbwhbyWhg0VGyU",
