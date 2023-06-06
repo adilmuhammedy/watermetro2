@@ -20,13 +20,7 @@
     "react-responsive-carousel": "^3.2.23",
     "react-router": "^5.3.4",
     "react-router-dom": "^5.3.4",
-<<<<<<< HEAD
     "react-scripts": "^5.0.1",
-=======
-    "react-scripts": "^4.0.0",
-    "react-slick": "^0.29.0",
-    "slick-carousel": "^1.8.1",
->>>>>>> 99582b77fd752553c3c128b18d9d38f7747c7d51
     "web-vitals": "^2.1.4"
   },
   "scripts": {

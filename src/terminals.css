@@ -33,6 +33,11 @@ box-shadow: 0 2px 5px rgba(5, 5, 5, 0.3);
     cursor: pointer;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
+.imgkakka{
+    position: relative;
+    width:800px;
+    height:480px;
+}
 .vyttila{
     color: rgb(8, 7, 7);
     font-size: 15px;
@@ -143,11 +148,7 @@ box-shadow: 0 2px 5px rgba(5, 5, 5, 0.3);
     letter-spacing: 0.1px;
     top:10px;
 }
-.imgkakka{
-    position: relative;
-    width:800px;
-    height:480px;
-}
+
 .nearby{
     position: relative;
     top: -4px;

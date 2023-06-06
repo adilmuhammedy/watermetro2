@@ -4,7 +4,10 @@ import './terminals.css';
 import { getAuth,onAuthStateChanged, signOut } from "firebase/auth";
 import 'firebase/compat/auth';
 import firebase from 'firebase/compat/app';
-import Map from './Map';
+import Map1 from './Map1';
+import Map2 from './Map2';
+import Map3 from './Map3';
+import Map4 from './Map4';
 
 
 //AIzaSyCfnir-sY46pnn-2hNoU05STZBLi8mokFU
@@ -107,6 +110,7 @@ const Terminals = () => {
             <p className='descrip'>Kakkanad is located near Thrikkakara, the capital of the mythical King Mahabali. The old name of Kakkanad is Kakkanad-Thrikkakara. Bali succeeded Virochana as the king of the Asuras, and his reign over the realm was characterized by peace and prosperity. It is especially notable for its significance in the festival of Onam, and in the tale associated with it linked to the famous Thrikkakara temple. Kakkanad traces it’s history back to the rule of King Mahabali, under who’s rule everyone was equal and prospered. This is true for Kakkanad even today. Being the IT hub of Kochi, it has contributed to the economic progress and development of the city. With young energetic crowd that aspires for a modern lifestyle, Kakkanad is an upcoming hot spot for modern cafés and cosmopolitan culture. Despite the abundance of high rise buildings, the lush green landscape around provides an escape from the monotony of IT life
             </p>
            <img src='https://dl.dropboxusercontent.com/s/7ypxoc0yq704q8f/kakkanad.webp?dl=0' className="imgkakka" alt="kakkanad"/>
+           <Map1/>
            <h3 className='nearby'>Nearby Attractions</h3>
            <p className='attractions'>Discover nearby attractions, create memorable experiences, and embark on unforgettable adventures</p>
           
@@ -172,6 +176,7 @@ const Terminals = () => {
             <p className='loc'>Terminal Location: Vyttila, Kochi</p>
             <p className='descrip'>The name Vyttila is said to be evolved from the word “Vayal Thala” meaning the main part of the paddy field. Once the area including Elamkulam, were paddy fields and paddy cultivation was the main source of income. The paddy field existed from Ernakulam, Girinagar, Panampilly Nagar, Gandhi Nagar, Jawahar Nagar, Kumarananshan Nagar and extended to Kaniyampuzha and Panamkutyy bridge. Some also say that once there existed a bunch of dacoits, who murdered and looted the travelers, hence the name Vytilla evolved from ‘Vazhithala’. Now, Vytilla has evolved into the busiest as well as one of the largest intersections in Kerala, the most important industrial area of Kerala. Vytilla, as the name suggests, was the center of agriculture famous for paddy fields, and has now evolved into a center for mobility. Housing the Vytilla Mobility Hub, it is well connected to the city and other parts of Kerala. It heeds to the hustle and bustle of the city, while resting on a strong foundation of connectivity. The convergence of different modes of transport is the true essence of the location making it a seamless transit experience. Vytilla enables the people of the city to reach their destinations with no hassle.</p>
             <img src='https://dl.dropboxusercontent.com/s/fl5x2cngjqgnypa/vytila.jpg?dl=0' className="imgkakka" alt="vyttila"/>
+            <Map2/>
             <h3 className='nearby'>Nearby Attractions</h3>
             <p className='attractions'>Discover nearby attractions, create memorable experiences, and embark on unforgettable adventures</p>
             <div className='container'>
@@ -221,6 +226,7 @@ const Terminals = () => {
             <p className='loc1'>Terminal Location: Highcourt, Kochi</p>
             <p className='descrip1'>The present State of Kerala is result of integrating the erstwhile princely kingdoms of Travancore and Cochin with Malabar district and Kasaragod. The present judicial system in Kerala has its roots dating back to the days of the monarchs of the Kingdoms of Travancore and Cochin. The Ram Mohan Palace used to house the High Court of Kerala until 2006. The heritage building in the art deco style, which was current at the time, was built by Chennai-based architects Prynne, Abbott and Davis. In the early 1940s, during World War II, the palace served as the combined military hospital where British and Indian officers of the British Army recuperated from their injuries. It became the High Court building of the Cochin-Travancore State 1949 onward, and in 1956, following Kerala piravi, it became the High Court of Kerala. At present it houses the offices of the Judicial Academy, ADR Centre and the Vigilance Registrar. In 2006, the Kerala High Court moved to the current building. The High Court empowers and protects the people of the city. It facilitates the needs of the people, with a neutral outlook not just through law and order but also through connectivity to the remote islands of Kochi.</p>
             <img src="https://dl.dropboxusercontent.com/s/07g29unxg2j6qjo/high-court.jpg?dl=0"  className="imgkakka" alt="highcourt"/>
+            <Map3/>
             <h3 className='nearby'>Nearby Attractions</h3>
             <p className='attractions'>Discover nearby attractions, create memorable experiences, and embark on unforgettable adventures</p>
             <div className="container">
@@ -285,6 +291,7 @@ const Terminals = () => {
             <p className='loc'>Terminal Location: Vypin, Kochi</p>
             <p className='descrip'>The Vypin terminal is located on Vypin Island, which is a popular tourist destination in Kochi. The island is known for its scenic beauty, pristine beaches, and fishing villages. The Vypin terminal is one of the thirty eight terminals that are part of the Phase 1 of the Kochi Water Metro project. The Vypin terminal is expected to provide an efficient and eco-friendly mode of transportation for the residents and visitors of the island. The terminal is expected to have modern facilities such as ticket counters, waiting areas, and other amenities for passengers. The terminal is also expected to have a lift facility for the convenience of passengers. The Vypin terminal is expected to provide seamless connectivity to other modes of transport, such as buses and taxis, to provide a hassle-free travel experience to commuters. The terminal is also expected to have bike rental facilities for visitors who prefer to explore the island on their own. The Vypin terminal is located near several popular tourist destinations on the island, such as the Cherai Beach, the Munambam Fishing Harbor, and the Puthuvype Lighthouse. Visitors can also explore the traditional fishing villages and experience the local culture and lifestyle of the island. The Vypin terminal on the Kochi Water Metro is expected to play a crucial role in promoting sustainable transportation and improving the overall quality of life for the people of Vypin Island.</p>
             <img src='https://dl.dropboxusercontent.com/s/2bqz81uew9ja73l/vypin.webp?dl=0' className="imgkakka" alt="vypin"/>
+            <Map4/>
             <h3 className='nearby'>Nearby Attractions</h3>
             <p className='attractions'>Discover nearby attractions, create memorable experiences, and embark on unforgettable adventures</p>
             <div className="container">
