@@ -40,6 +40,27 @@ export const Register = () => {
       console.error('Registration error:', error);
     });
   };
+
+  const provider = new firebase.auth.GoogleAuthProvider();
+  const handleGoogleLogin = () => {
+    firebase
+      .auth()
+      .signInWithPopup(provider)
+      .then((result) => {
+        // Handle successful login
+        const user = result.user;
+        console.log('Logged in user:', user);
+       
+        // Redirect to a new page or perform any other actions
+        history.push('/');
+      })
+      .catch((error) => {
+        // Handle login error
+        console.error('Login error:', error);
+        // Display an error message or perform any other error handling
+      });
+  };
+  
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
   };
@@ -130,7 +151,20 @@ export const Register = () => {
       </form>
       <button className="user"onClick={handleLoginClick}>Existing user? Login here</button>
     </div>
-    </div>
+   
+    
+     <p className="or">
+     <span className="or-line"></span>
+     <span className="or-text">OR</span>
+    
+   </p>
+           <button className="google" onClick={handleGoogleLogin}>
+             <span className="google-icon">
+             </span>
+             Sign in with Google
+           </button>
+           </div>
+        
     
   );
 };

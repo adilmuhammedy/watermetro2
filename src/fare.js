@@ -253,7 +253,7 @@ const FareDetails = (props) => {
                <p className='place' >{from}</p>
                <p className='place1'>{to}</p>
                <p className='ttype'>Ticket Type: {ticketType}</p>
-               <img src="https://dl.dropboxusercontent.com/s/3mlket8ojgqlz51/symbol.png?dl=0" className="symbol8" alt="symbol1"/>
+               <img src="https://dl.dropboxusercontent.com/s/3mlket8ojgqlz51/symbol.png?dl=0" className="boatimg" alt="boatimg"/>
                <p className='time'>Time taken for your journey:20 minutes</p>
         <h3 className="rupee">₹{fare}</h3>
         <div className="icons">

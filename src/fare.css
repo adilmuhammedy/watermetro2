@@ -186,10 +186,10 @@ box-shadow: 0 2px 5px rgba(5, 5, 5, 0.3);
     font-family: unset;
     font-size: 17px;
 }
-.symbol8{
-    position: absolute;
-    top:130px;
-    left:328px;
+.boatimg{
+    position: relative;
+    top:-15px;
+    left:230px;
     width:170px;
     height:40px;
 }
