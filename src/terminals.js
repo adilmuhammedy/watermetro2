@@ -1,15 +1,13 @@
 import React,  {useState, useEffect  } from 'react';
 import { useHistory } from 'react-router-dom';
 import './terminals.css';
-//import logo from 'https://www.dropbox.com/s/zckq71jrgnv4yvf/logo.png?dl=0';
-//import kakkanad from 'https://www.dropbox.com/s/30586dblko3okqs/kakkanad.webp?dl=0';
-//import vypin from 'https://www.dropbox.com/s/4k7aonwojyr2b6w/vypin.webp?dl=0';
-//import vyttila from 'https://www.dropbox.com/s/xk3fy1w1ig2q0q0/vytila.jpg?dl=0';
 import { getAuth,onAuthStateChanged, signOut } from "firebase/auth";
 import 'firebase/compat/auth';
 import firebase from 'firebase/compat/app';
-//import avatar from 'https://www.dropbox.com/s/uu2hs3juypnf0rd/avatar.png?dl=0';
+import Map from './Map';
 
+
+//AIzaSyCfnir-sY46pnn-2hNoU05STZBLi8mokFU
 const Terminals = () => {
   const history = useHistory();
   const [displayName, setDisplayName] = useState('');
@@ -101,6 +99,7 @@ const Terminals = () => {
             <p className='descrip'>Kakkanad is located near Thrikkakara, the capital of the mythical King Mahabali. The old name of Kakkanad is Kakkanad-Thrikkakara. Bali succeeded Virochana as the king of the Asuras, and his reign over the realm was characterized by peace and prosperity. It is especially notable for its significance in the festival of Onam, and in the tale associated with it linked to the famous Thrikkakara temple. Kakkanad traces it’s history back to the rule of King Mahabali, under who’s rule everyone was equal and prospered. This is true for Kakkanad even today. Being the IT hub of Kochi, it has contributed to the economic progress and development of the city. With young energetic crowd that aspires for a modern lifestyle, Kakkanad is an upcoming hot spot for modern cafés and cosmopolitan culture. Despite the abundance of high rise buildings, the lush green landscape around provides an escape from the monotony of IT life
             </p>
            <img src="https://dl.dropboxusercontent.com/s/30586dblko3okqs/kakkanad.webp?dl=0" className="imgkakka" alt="kakkanad"/>
+           <Map/>
           </div>
         );
       case 'vyttila':
@@ -155,6 +154,7 @@ const Terminals = () => {
         
           <h4 className="kakkanad">KAKKANAD</h4>
             <img src="https://dl.dropboxusercontent.com/s/30586dblko3okqs/kakkanad.webp?dl=0" className="imgkakkanad-img" alt="kakkanad" onClick={() => handleTerminalClick('kakkanad')} />
+
           {activeTerminal === 'kakkanad' && renderTerminalDetails()}
 
         <div>

@@ -7,6 +7,7 @@ import Login from './login';
 import Register from './register';
 import FareDetails from './fare';
 import Confirmation from './confirmation';
+import Map from './Map';
 //foolish comment
 
 
@@ -24,6 +25,7 @@ function App() {
         <Route path="/register" component={Register} />
         <Route path="/fare" component={FareDetails} />
         <Route path="/confirmation" component={Confirmation}/>
+        <Route path="/Map" component={Map} />
       </Switch>
     </Router>
     </>
