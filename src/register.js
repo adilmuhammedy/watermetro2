@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import firebase from 'firebase/compat/app';
+import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 import 'firebase/compat/auth';
 import './register.css';
 //import logo from 'https://www.dropbox.com/s/zckq71jrgnv4yvf/logo.png?dl=0';
@@ -11,6 +12,11 @@ export const Register = () => {
   const [name, setName] = useState('');
   const [conpass, setConpass] = useState('');
   const history = useHistory();
+  const [password, setPassword] = useState('');
+  const [displayName, setDisplayName] = useState('');
+  const [isUserSignedIn, setIsUserSignedIn] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  
 
   const firebaseConfig = {
     // Add your Firebase configuration object here
@@ -24,6 +30,31 @@ export const Register = () => {
   };
   firebase.initializeApp(firebaseConfig);
 
+  const auth = getAuth();
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        // User is signed in
+        const uid = user.uid;
+        const displayName = user.displayName;
+        const email = user.email;
+        const photoURL = user.photoURL;
+        const emailVerified = user.emailVerified;
+        console.log(displayName, email, photoURL, emailVerified);
+        setDisplayName(displayName);
+        setIsUserSignedIn(true);
+        history.push('/'); // Redirect to the dashboard or home page
+      } else {
+        // User is signed out
+        setIsUserSignedIn(false);
+      }
+    });
+
+    // Cleanup function
+    return () => unsubscribe();
+  }, [auth, history]);
+
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(email);
@@ -33,7 +64,10 @@ export const Register = () => {
     .then((userCredential) => {
       // Handle successful registration
       const user = userCredential.user;
+      const displayName = user.displayName;
       console.log('Registered user:', user);
+      alert("Registration Successful")
+      history.push('/login');
     })
     .catch((error) => {
       // Handle registration error
