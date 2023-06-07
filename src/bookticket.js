@@ -1,13 +1,13 @@
 import React, {useState, useEffect  } from 'react';
 import './bookticket.css';
 import { useHistory } from 'react-router-dom';
-//import logo from 'https://www.dropbox.com/s/zckq71jrgnv4yvf/logo.png?dl=0';
 import QRCode from 'qrcode.react';
 import { getAuth,onAuthStateChanged, signOut } from "firebase/auth";
 import 'firebase/compat/auth';
 import firebase from 'firebase/compat/app';
-//import avatar from 'https://www.dropbox.com/s/uu2hs3juypnf0rd/avatar.png?dl=0';
-//import wmetroVideo from 'https://www.dropbox.com/s/iqlgvwcjhawdl3t/wmetro.mp4?dl=0';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
+
 
 const BookTicket = (props) => {
   const history = useHistory();
@@ -19,6 +19,8 @@ const BookTicket = (props) => {
   const [displayName, setDisplayName] = useState('');
   const [isUserSignedIn, setIsUserSignedIn] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [selectedDate, setSelectedDate] = useState(null);
+
  
 
   useEffect(() => {
@@ -198,6 +200,9 @@ const BookTicket = (props) => {
   }
   
   }
+  const CustomCalendarContainer = ({ children }) => (
+    <div className="calendar-container">{children}</div>
+  );
 
   return (
     <div className="Home">
@@ -226,7 +231,7 @@ const BookTicket = (props) => {
 
       <div className="bookfrom">
         <form action="#" onSubmit={handleSubmit}>
-          <h4 className="from">FROM</h4>
+          <h4 className="from">From</h4>
           <div className='selectfrom'>
             <select value={selectedFrom} onChange={handleFromChange} className="selectfrom">
               <option value="SELECT">----SELECT----</option>
@@ -236,7 +241,7 @@ const BookTicket = (props) => {
               <option value="Vypin">VYPIN</option>
             </select>
           </div>
-          <h4 className="to">TO</h4>
+          <h4 className="to">To</h4>
           <div className='selectto'>
             <select value={selectedTo} onChange={handleToChange} className="selectto">
               <option value="SELECT">----SELECT----</option>
@@ -263,6 +268,15 @@ const BookTicket = (props) => {
               value={passengerCount}
               onChange={handlePassengerCountChange}
             />
+            <h4 className="sdate">Date</h4>
+            <DatePicker className='dateselect'
+        selected={selectedDate}
+        onChange={(date) => setSelectedDate(date)}
+        calendarContainer={CustomCalendarContainer}
+        dateFormat="dd/MM/yyyy"
+        placeholderText="Select a date"
+      />
+
        
           <button type="submit" className="submit1">Submit</button>
         </form>

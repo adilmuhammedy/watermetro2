@@ -17,7 +17,6 @@
     height: 50px;
     left: 54px;
     top: 70px;
-    
     font-family: 'Akshar';
     font-style: normal;
     font-weight: 700;
@@ -32,12 +31,12 @@
     box-sizing: border-box;
 
 position: absolute;
-width: 400px;
-height: 430px;
-left: 150px;
+width: 550px;
+height: 350px;
+left: 450px;
 top: 240px;
 
-background: #4179A2;
+background: #123752b7;
 border:none;
 box-shadow:0 0 10px rgba(0, 0, 0, 0.1);
 border-radius: 15px;
@@ -52,101 +51,131 @@ font-style: normal;
 font-weight: 500;
 font-size: 15px;
 line-height: 24px;
-color: #fefefe;
+color: #fffefe;
   }
   .selectfrom{
     position: absolute;
     top: 25px;
-    width:300px;
-    left: 20px;
+    width:200px;
+    left: 10px;
   
     border-radius: 6px;
     color: #333;
     font-size: 14px;
     padding: 5px;
+    border:none;
   }
 
   .to{
     position: absolute;
-left: 20px;
-top: 70px;
+left: 300px;
+top: 1px;
 font-family: 'Inter';
 font-style: normal;
 font-weight: 500;
 font-size: 15px;
 line-height: 24px;
-color: #fefefe;
+color: #fffefe;
   }
   .selectto{
     position: absolute;
-    top: 60px;
-    width:300px;
-    left: 20px;
+    top: 25px;
+    width:200px;
+    left: 150px;
    
     border-radius: 6px;
     color: #333;
     font-size: 14px;
     padding: 5px;
+    border:none;
   }
   .selecttype{
     position: absolute;
-    top: 195px;
-    width:150px;
-    left: 40px;
+    top: 125px;
+    width:20y0px;
+    left: 20px;
     height: 30px;
     border-radius: 6px;
     color: #333;
     font-size: 14px;
     padding: 2px;
+    border:none;
   }
 
 
   .tickettype{
     position: absolute;
 left: 20px;
-top: 145px;
+top: 80px;
 font-family: 'Inter';
 font-style: normal;
 font-weight: 500;
 font-size: 15px;
 line-height: 24px;
-color: #fefefe;
+color: #fffefe;
   }
 
   .nopass{
     position: absolute;
 left: 20px;
-top: 230px;
+top: 160px;
 font-family: 'Inter';
 font-style: normal;
 font-weight: 500;
 font-size: 15px;
 line-height: 24px;
-color: #ffffff; /* Set the font color to white */
-  }
-  .nopassfield{
-    position: absolute;
-    top: 60px;
-    left: 20px;
-    width:300px;
-    background-color: #000000;
-    color: #040000; /* Set the font color to white */
-   
+color: #fffefe;/* Set the font color to white */
   }
   .nopasslist{
-    color:#000000;
+    color: #333;
     position: absolute;
-    top:280px;
-    left: 40px;
+    top:210px;
+    left: 20px;
     width:200px;
     height: 24px;
     border-radius: 6px;
+    color: #333;
+    font-size: 14px;
+    padding: 2px;
+    border:none;
     }
+  .sdate{
+    position: absolute;
+    left: 300px;
+    top: 80px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 24px;
+   
+    color: #fffefe;
+  }
+  .dateselect{
+    position: absolute;
+    left: 300px;
+    top: 105px;
+    width: 200px;
+    height: 27px;
+  
+    border:none;
+    box-shadow:0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+  }
+  .calendar-container{
+    position: absolute;
+    top:140px;
+    left: 300px;
+    background-color: #fefefe;
+    border-radius: 6px;
+
+  }
+
 
   .submit1{
     position: absolute;
-    top: 365px;
-    left: 120px;
+    top: 270px;
+    left: 200px;
     width:150px;
     height:40px;
     cursor: pointer;
@@ -241,6 +270,8 @@ color: #ffffff; /* Set the font color to white */
     height: 100%;
     background-color: rgba(43, 176, 209, 0.46); /* Adjust the RGBA color and opacity as desired */
   }
+
+
 
 
  
