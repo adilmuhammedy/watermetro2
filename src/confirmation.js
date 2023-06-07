@@ -21,8 +21,8 @@ import QRCode from 'qrcode.react';
 
     
     const location = useLocation();
-const { from, to, ticketType, nopass } = location.state  || {};
-console.log('Form Values in confirm page:', from, to, ticketType, nopass);
+const { from, to, ticketType, nopass,date} = location.state  || {};
+console.log('Form Values in confirm page:', from, to, ticketType, nopass,date);
 
 useEffect(() => {
   const fetchFareData = async () => {
@@ -32,7 +32,7 @@ useEffect(() => {
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ from, to, ticketType, nopass })
+        body: JSON.stringify({ from, to, ticketType, nopass,date })
       });
 
       if (response.ok) {
@@ -59,7 +59,8 @@ const handleClick = async () => {
     to,
     ticketType,
     nopass,
-    fare
+    fare,
+    date
   };
 
   setQRCodeData(JSON.stringify(data));
@@ -101,15 +102,15 @@ const handleClick = async () => {
         <div className="rectan" style={{ display: confirmed ? 'none' : 'block' }}>
         <h2 className="ticket">TICKET DETAILS</h2>
         <h6 className='from8'>FROM</h6>
-        <h4 className="boarding" id="depart">📍 {from}Kakkanad</h4>
+        <h4 className="boarding" id="depart">📍 {from}</h4>
         <h6 className='to8'>TO</h6>
-        <h4 className="destination" id="arrive">📍{to}Vyttila</h4>  
+        <h4 className="destination" id="arrive">📍{to}</h4>  
         <img src='https://dl.dropboxusercontent.com/s/e38hexq34rbq89l/stock-vector-half-arrow-up-down-icon-web-icon-premium-quality-graphic-design-signs-outline-symbols-747364291-removebg-preview-removebg-preview.png?dl=0' className='arrow' alt='arrow'/>
-       <h4 className="type">Ticket Type:</h4><h4 className='type1'> {ticketType}one way</h4>
-        <h4 className="pass">Total passengers:</h4><h4 className='pass1'>{nopass}6</h4>
+       <h4 className="type">Ticket Type:</h4><h4 className='type1'> {ticketType}</h4>
+        <h4 className="pass">Total passengers:</h4><h4 className='pass1'>{nopass}</h4>
         <img src='https://dl.dropboxusercontent.com/s/k7vuqfuqukd349l/date-day-calendar-illustration-on-white-background-creative-icon-vector-removebg-preview.png?dl=0' className='dateofjourney' alt='date'/>
-        <h4 className='dateee'> 30/06/2023</h4>
-        <p className="fares">Ticket Fare:</p><h4 className='rupee'>₹{fare} 30 </h4>
+        <h4 className='dateee'>{date}</h4>
+        <p className="fares">Ticket Fare:</p><h4 className='rupee'>₹{fare}</h4>
         
         <button type="submit" className="sub" onClick={ handleClick}>Confirm</button>
   
