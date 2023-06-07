@@ -18,7 +18,7 @@ import QRCode from 'qrcode.react';
   const [showQRCode, setShowQRCode] = useState(false);
   const [confirmed, setConfirmed] = useState(false);
 
-
+ 
     
     const location = useLocation();
 const { from, to, ticketType, nopass,date} = location.state  || {};
