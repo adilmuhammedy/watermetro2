@@ -108,7 +108,7 @@ padding: 10px;
     color: #4b4b4b;
 
 }
-.type1{
+.type8{
      position: absolute;
     width: 199px;
     height: 30px;
@@ -208,7 +208,7 @@ line-height: 29px;
 
 color: #000000;
 }
-.rupee{
+.rupee2{
     position: absolute;
     width: 266px;
     height: 40px;
@@ -310,5 +310,14 @@ height: 40px;
     position: absolute;
     top:370px;
     left:90px;
+
+}
+.booking-id{
+    position: relative;
+    top:160px;
+    left:70px;
+    color: #1258a4;
+    font-size: 15px;
+    
 
 }
