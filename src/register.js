@@ -55,6 +55,27 @@ export const Register = () => {
     return () => unsubscribe();
   }, [auth, history]);
 
+  const provider = new firebase.auth.GoogleAuthProvider();
+  const handleGoogleLogin = () => {
+    firebase
+      .auth()
+      .signInWithPopup(provider)
+      .then((result) => {
+        // Handle successful login
+        const user = result.user;
+        console.log('Logged in user:', user);
+       
+        // Redirect to a new page or perform any other actions
+        history.push('/');
+      })
+      .catch((error) => {
+        // Handle login error
+        console.error('Login error:', error);
+        // Display an error message or perform any other error handling
+      });
+  };
+
+
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(email);
@@ -164,8 +185,17 @@ export const Register = () => {
       </form>
       <button className="user"onClick={handleLoginClick}>Existing user? Login here</button>
     </div>
-    </div>
-    
+    <div className='goo'>
+    <p className="or">
+  <span className="or-line"></span>
+  <span className="or-text1">or</span>
+</p>
+        <button className="google" onClick={handleGoogleLogin}>
+          <span className="google-icon"></span>
+          Sign in with Google
+        </button>
+      </div>
+      </div>
   );
 };
 export default Register;
