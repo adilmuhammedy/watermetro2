@@ -261,7 +261,7 @@ height: 40px;
     font-size: 18px;
     font-weight: 11px;
     top:200px;
-    left:40px;
+    left:50px;
 }
 .fdestination{
     position: absolute;
@@ -278,7 +278,7 @@ height: 40px;
     font-size: 15px;
     font-weight: 10;
     top:250px;
-    left:40px;
+    left:110px;
 }
 .fpass{
     position: absolute;
@@ -286,7 +286,7 @@ height: 40px;
     font-size: 15px;
     font-weight: 10;
     top:280px;
-    left:40px;
+    left:110px;
 }
 .ffares{
     position: absolute;
@@ -294,7 +294,7 @@ height: 40px;
     font-size: 15px;
     font-weight: 10;
     top:310px;
-    left:40px;
+    left:110px;
 
 }
 .wishes{

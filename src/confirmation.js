@@ -21,10 +21,8 @@ import QRCode from 'qrcode.react';
 
     
     const location = useLocation();
-const { from, to, ticketType, nopass } = location.state  || {};
-
-const [bookingId, setBookingId] = useState('');
-console.log('Form Values in confirm page:', from, to, ticketType, nopass);
+const { from, to, ticketType, nopass,date} = location.state  || {};
+console.log('Form Values in confirm page:', from, to, ticketType, nopass,date);
 
 useEffect(() => {
   const fetchFareData = async () => {
@@ -34,7 +32,7 @@ useEffect(() => {
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ from, to, ticketType, nopass })
+        body: JSON.stringify({ from, to, ticketType, nopass,date })
       });
 
       if (response.ok) {
@@ -78,7 +76,8 @@ const handleClick = async () => {
     to,
     ticketType,
     nopass,
-    fare
+    fare,
+    date
   };
 
   setQRCodeData(JSON.stringify(data));
@@ -127,8 +126,8 @@ const handleClick = async () => {
        <h4 className="type">Ticket Type:</h4><h4 className='type8'> {ticketType}</h4>
         <h4 className="pass">Total passengers:</h4><h4 className='pass1'>{nopass}</h4>
         <img src='https://dl.dropboxusercontent.com/s/k7vuqfuqukd349l/date-day-calendar-illustration-on-white-background-creative-icon-vector-removebg-preview.png?dl=0' className='dateofjourney' alt='date'/>
-        <h4 className='dateee'> 30/06/2023</h4>
-        <p className="fares">Ticket Fare:</p><h4 className='rupee2'>₹{fare} 30 </h4>
+        <h4 className='dateee'>{date}</h4>
+        <p className="fares">Ticket Fare:</p><h4 className='rupee'>₹{fare}</h4>
         
         <button type="submit" className="sub" onClick={ handleClick}>Confirm</button>
   

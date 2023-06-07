@@ -16,6 +16,7 @@ const BookTicket = (props) => {
   const [selectedTo, setSelectedTo] = useState("SELECT");
   const [selectedType, setSelectedType] = useState("");
   const [passengerCount, setPassengerCount] = useState("");
+  const [date, setDate] = useState("");
   const [displayName, setDisplayName] = useState('');
   const [isUserSignedIn, setIsUserSignedIn] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -128,6 +129,7 @@ const BookTicket = (props) => {
       to: selectedTo,
       ticketType: selectedType,
       nopass: passengerCount,
+      date: selectedDateString
     };
     var from=requestBody.from;
    var to=requestBody.to;
@@ -166,7 +168,8 @@ const BookTicket = (props) => {
         from: selectedFrom,
         to: selectedTo,
         ticketType: selectedType,
-        nopass: passengerCount
+        nopass: passengerCount,
+        date: selectedDateString
       }
     });
  
@@ -185,6 +188,7 @@ const BookTicket = (props) => {
       setSelectedTo("SELECT");
       setSelectedType("");
       setPassengerCount("");
+      setDate("");
       // Redirect to the current location
       history.push(props.match.path);
             // Parse the response JSON
@@ -203,6 +207,7 @@ const BookTicket = (props) => {
   const CustomCalendarContainer = ({ children }) => (
     <div className="calendar-container">{children}</div>
   );
+  const selectedDateString = selectedDate ? selectedDate.toLocaleDateString() : "";
 
   return (
     <div className="Home">
@@ -218,17 +223,12 @@ const BookTicket = (props) => {
         )}
         {isUserSignedIn && (
         <div className="welcome-message">
- 
           Welcome, {displayName}!
-          
         </div>
       )}
       </header>
       <div className="rectangle"></div>
       <h2 className="book1">BOOK TICKETS</h2>
-
-
-
       <div className="bookfrom">
         <form action="#" onSubmit={handleSubmit}>
           <h4 className="from">From</h4>
@@ -260,7 +260,6 @@ const BookTicket = (props) => {
             </select>
           </div>
           <h4 className="nopass">No.of Passengers</h4>
-
             <input 
               type="number"
               placeholder="No.of Passengers"
@@ -275,9 +274,8 @@ const BookTicket = (props) => {
         calendarContainer={CustomCalendarContainer}
         dateFormat="dd/MM/yyyy"
         placeholderText="Select a date"
+        value={selectedDateString}
       />
-
-       
           <button type="submit" className="submit1">Submit</button>
         </form>
       </div>
@@ -299,9 +297,6 @@ const BookTicket = (props) => {
         )}
       </div>
       )}
-
-
-
       <div className="background-video">
       <video autoPlay loop muted>
         <source src="https://dl.dropboxusercontent.com/s/iqlgvwcjhawdl3t/wmetro.mp4?dl=0" type="video/mp4" />
