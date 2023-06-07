@@ -1,4 +1,4 @@
-import React,  {useState, useEffect ,useRef} from 'react';
+import React,  {useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import './terminals.css';
 import { getAuth,onAuthStateChanged, signOut } from "firebase/auth";
@@ -16,7 +16,6 @@ const Terminals = () => {
   const [displayName, setDisplayName] = useState('');
   const [isUserSignedIn, setIsUserSignedIn] = useState(false);
   const [isOpen, setIsOpen] = useState(false)
-  const containerRef = useRef(null);
   useEffect(() => {
     const firebaseConfig = {
       apiKey: "AIzaSyCGRG2r6MT-CoPN1d-UVrbwhbyWhg0VGyU",
@@ -28,6 +27,7 @@ const Terminals = () => {
       measurementId: "G-CREXXM61GJ"
       // Add your Firebase configuration object here
     };
+    
 
     firebase.initializeApp(firebaseConfig);
 
@@ -64,8 +64,7 @@ const Terminals = () => {
     setIsOpen(!isOpen);
   };
 
-
-  const [activeTerminal, setActiveTerminal] = useState(null);
+  const [activeTerminal, setActiveTerminal] = useState('kakkanad');
 
   
   
