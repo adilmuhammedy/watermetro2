@@ -1,11 +1,10 @@
 import React from 'react';
 import './confirmation.css';
 import { useHistory } from 'react-router-dom';
-//import logo from 'https://dl.dropboxusercontent.com/s/zckq71jrgnv4yvf/logo.png?dl=0';
 import { useLocation } from 'react-router-dom';
 import  { useEffect, useState } from 'react';
 import QRCode from 'qrcode.react';
-//import symbol1 from 'https://dl.dropboxusercontent.com/s/3mlket8ojgqlz51/symbol.png?dl=0';
+
 
 
 
@@ -17,6 +16,8 @@ import QRCode from 'qrcode.react';
     const [qrCodeData, setQRCodeData] = useState(null);
   const [showQRCode, setShowQRCode] = useState(false);
   const [confirmed, setConfirmed] = useState(false);
+  const [bookingId, setBookingId] = useState(null);
+
 
  
     
@@ -127,7 +128,7 @@ const handleClick = async () => {
         <h4 className="pass">Total passengers:</h4><h4 className='pass1'>{nopass}</h4>
         <img src='https://dl.dropboxusercontent.com/s/k7vuqfuqukd349l/date-day-calendar-illustration-on-white-background-creative-icon-vector-removebg-preview.png?dl=0' className='dateofjourney' alt='date'/>
         <h4 className='dateee'>{date}</h4>
-        <p className="fares">Ticket Fare:</p><h4 className='rupee'>₹{fare}</h4>
+        <p className="fares">Ticket Fare:</p><h4 className='rupee2'>₹{fare}</h4>
         
         <button type="submit" className="sub" onClick={ handleClick}>Confirm</button>
   
@@ -143,7 +144,7 @@ const handleClick = async () => {
        <h4 className="ftype">Ticket Type: {ticketType}</h4>
         <h4 className="fpass">Total passengers:{nopass}</h4>
         <h4 className="ffares">Ticket Fare: {fare} rs</h4>
-        <h5 className="wishes">----Happy Journey----</h5>
+        <h5 className="wishes">~ H a p p y    J o u r n e y ~</h5>
         <div class="text-container">
         <h4 className="booking-id">Booking ID: {bookingId}</h4>
         </div>
