@@ -1,4 +1,3 @@
-
 .home{
 
     font-size: 15px;
@@ -8,8 +7,6 @@
     top:10px;
     display: inline-block;
     cursor: pointer;
-    
-    
   }
   .book1{
     position: absolute;
@@ -17,136 +14,151 @@
     height: 50px;
     left: 54px;
     top: 70px;
-    
     font-family: 'Akshar';
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
     line-height: 70px;
     letter-spacing: 0.05em;
-
     color: #fefefe;
-    
   }
-  .bookfrom{
+.bookfrom{
     box-sizing: border-box;
-
-position: absolute;
-width: 400px;
-height: 430px;
-left: 150px;
-top: 240px;
-
-background: #4179A2;
-border:none;
-box-shadow:0 0 10px rgba(0, 0, 0, 0.1);
-border-radius: 15px;
-  }
-
-  .from{
     position: absolute;
-left: 20px;
-top: 2px;
-font-family: 'Inter';
-font-style: normal;
-font-weight: 500;
-font-size: 15px;
-line-height: 24px;
-color: #fefefe;
-  }
-  .selectfrom{
+    width: 550px;
+    height: 350px;
+    left: 450px;
+    top: 240px;
+    background: #123752b7;
+    border:none;
+    box-shadow:0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+.from{
+    position: absolute;
+    left: 20px;
+    top: 2px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 24px;
+    color: #fffefe;
+}
+.selectfrom{
     position: absolute;
     top: 25px;
-    width:300px;
-    left: 20px;
+    width:200px;
+    left: 10px;
   
     border-radius: 6px;
     color: #333;
     font-size: 14px;
     padding: 5px;
-  }
-
-  .to{
+    border:none;
+}
+.to{
     position: absolute;
-left: 20px;
-top: 70px;
-font-family: 'Inter';
-font-style: normal;
-font-weight: 500;
-font-size: 15px;
-line-height: 24px;
-color: #fefefe;
-  }
-  .selectto{
+    left: 300px;
+    top: 1px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 24px;
+    color: #fffefe;
+}
+.selectto{
     position: absolute;
-    top: 60px;
-    width:300px;
-    left: 20px;
-   
+    top: 25px;
+    width:200px;
+    left: 150px;  
     border-radius: 6px;
     color: #333;
     font-size: 14px;
     padding: 5px;
+    border:none;
   }
-  .selecttype{
+.selecttype{
     position: absolute;
-    top: 195px;
-    width:150px;
-    left: 40px;
+    top: 125px;
+    width:200px;
+    left: 20px;
     height: 30px;
     border-radius: 6px;
     color: #333;
     font-size: 14px;
     padding: 2px;
+    border:none;
   }
-
-
-  .tickettype{
+.tickettype{
     position: absolute;
-left: 20px;
-top: 145px;
-font-family: 'Inter';
-font-style: normal;
-font-weight: 500;
-font-size: 15px;
-line-height: 24px;
-color: #fefefe;
-  }
-
-  .nopass{
-    position: absolute;
-left: 20px;
-top: 230px;
-font-family: 'Inter';
-font-style: normal;
-font-weight: 500;
-font-size: 15px;
-line-height: 24px;
-color: #ffffff; /* Set the font color to white */
-  }
-  .nopassfield{
-    position: absolute;
-    top: 60px;
     left: 20px;
-    width:300px;
-    background-color: #000000;
-    color: #040000; /* Set the font color to white */
-   
-  }
-  .nopasslist{
-    color:#000000;
+    top: 80px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 24px;
+    color: #fffefe;
+}
+.nopass{
     position: absolute;
-    top:280px;
-    left: 40px;
+    left: 20px;
+    top: 160px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 24px;
+    color: #fffefe;/* Set the font color to white */
+}
+.nopasslist{
+    color: #333;
+    position: absolute;
+    top:210px;
+    left: 20px;
     width:200px;
     height: 24px;
     border-radius: 6px;
-    }
-
-  .submit1{
+    color: #333;
+    font-size: 14px;
+    padding: 2px;
+    border:none;
+}
+.sdate{
     position: absolute;
-    top: 365px;
-    left: 120px;
+    left: 300px;
+    top: 80px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 24px;   
+    color: #fffefe;
+}
+.dateselect{
+    position: absolute;
+    left: 300px;
+    top: 105px;
+    width: 200px;
+    height: 27px;  
+    border:none;
+    box-shadow:0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+  }
+.calendar-container{
+    position: absolute;
+    top:140px;
+    left: 300px;
+    background-color: #fefefe;
+    border-radius: 6px;
+  }
+.submit1{
+    position: absolute;
+    top: 270px;
+    left: 200px;
     width:150px;
     height:40px;
     cursor: pointer;
@@ -157,10 +169,7 @@ color: #ffffff; /* Set the font color to white */
     background: #44C0AA;
     border-color:#44C0AA ;
   }
-
-
-
-  .booktickets{
+.booktickets{
     color: black;
     font-size: 15px;
     position: relative;
@@ -168,8 +177,8 @@ color: #ffffff; /* Set the font color to white */
     top:10px;
     display: inline-block;
     cursor: pointer;
-  }
-  .terminals{
+}
+.terminals{
     color: black;
     font-size: 15px;
     position: relative;
@@ -178,7 +187,7 @@ color: #ffffff; /* Set the font color to white */
     display: inline-block;
     cursor: pointer;
   }
-  .faredetails{
+.faredetails{
     color: black;
     font-size: 15px;
     position: relative;
@@ -186,8 +195,8 @@ color: #ffffff; /* Set the font color to white */
     top:10px;
     display: inline-block;
     cursor: pointer;
-  }
-  .login{
+}
+.login{
     color: black;
     font-size: 15px;
     position: relative;
@@ -195,44 +204,36 @@ color: #ffffff; /* Set the font color to white */
     top:10px;
     display: inline-block;
     cursor: pointer;
-  }
-  .rectangle{
+}
+.rectangle{
     position: absolute;
     width: 1540px;
     height: 100px;
     left: 0px;
-    top: 80px;
-    
+    top: 80px;    
     background: #44C0AA;
   }
-
-
-  .qr-container {
+.qr-container {
     display: flex;
     position: absolute;
     top: 400px;
-    left: 80px;
-  
-  }
-
-  .background-video {
+    left: 80px; 
+}
+.background-video {
     position: fixed;
     top: 14%;
     left: 0;
     width: 100%;
     height: 90%;
-    z-index: -1;
-   
-  }
-  
-  .background-video video {
+    z-index: -1;   
+}
+.background-video video {
     object-fit: cover;
     width: 100%;
     height: 100%;
     opacity: 100; /* Adjust the opacity value as desired */
-  }
-  
-  .background-video::before {
+}  
+.background-video::before {
     content: "";
     position: absolute;
     top: 0;
@@ -240,7 +241,9 @@ color: #ffffff; /* Set the font color to white */
     width: 100%;
     height: 100%;
     background-color: rgba(43, 176, 209, 0.46); /* Adjust the RGBA color and opacity as desired */
-  }
+}
+
+
 
 
  

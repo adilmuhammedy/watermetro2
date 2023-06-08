@@ -1,20 +1,17 @@
 .ticket{
-    position: absolute;
+position: absolute;
 width: 390px;
 height: 40px;
 left: 50px;
 top: 20px;
-
 font-family: 'Inter';
 font-style: normal;
 font-weight: 700;
 font-size: 20px;
 line-height: 39px;
-
 color: #000000;
 }
 .rectan{
-   
 box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
 position: absolute;
 width: 700px;
@@ -24,152 +21,204 @@ top: 250px;
 background: #fcfdfd;
 border-radius: 20px;
 }
+.from8{
+    position: relative;
+    font-weight:500 ;
+    color: rgb(92, 92, 92);
+    font-size: 13px;
+    top:65px;
+    left:100px;
+}
 .boarding{
-    position: absolute;
+position: absolute;
 width: 200px;
 height: 30px;
 left: 80px;
-top: 80px;
-
+top: 90px;
 font-family: 'Inter';
 font-style: normal;
-font-weight: 500;
+font-weight: 600;
 font-size: 20px;
 line-height: 24px;
-
-box-shadow:0 0 10px rgba(0, 0, 0, 0.1);
-box-shadow: #000000;
 border-radius: 8px;
 padding: 10px;
 color: #000000;
 }
-
-.destination{
+.to8{
+    position: relative;
+    font-weight:500 ;
+    color: rgb(92, 92, 92);
+    font-size: 13px;
+    top:20px;
+    left:440px;
+}
+.arrow{
     position: absolute;
+    width:50px;
+    height:50px;
+    transform: rotate(90deg);
+    left:300px;
+    top:115px;
+}
+.destination{
+position: absolute;
 width: 200px;
 height: 30px;
-left: 80px;
-top: 160px;
+left: 420px;
+top: 93px;
 font-family: 'Inter';
 font-style: normal;
-font-weight: 500;
+font-weight: 600;
 font-size: 20px;
 line-height: 24px;
-box-shadow:0 0 10px rgba(0, 0, 0, 0.1);
-box-shadow: #000000;
 border-radius: 8px;
 padding: 10px;
 color: #000000;
+}
+.routemap{
+    position: relative;
+    width:200px;
+    height:120px;
+    left:240px;
+    top:-70px;
 }
 .type{
     position: absolute;
     width: 199px;
     height: 30px;
-    left: 450px;
-    top: 80px;
-    
+    left: 90px;
+    top: 150px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 19px;
     line-height: 24px;
-    box-shadow:0 0 10px rgba(0, 0, 0, 0.1);
-box-shadow: #000000;
-border-radius: 8px;
-padding: 10px;
-    color: #000000;
-
+    border-radius: 8px;
+    padding: 10px;
+    color: #4b4b4b;
+}
+.type8{
+     position: absolute;
+    width: 199px;
+    height: 30px;
+    left: 200px;
+    top: 163px;
+    font: 600;
+    font-size: 17px;
 }
 .deep{
-    
 position: absolute;
 width: 368px;
 height: 35px;
 left: 290px;
 top: 80px;
-
 font-family: 'Inter';
 font-style: normal;
 font-weight: 400;
 font-size: 17px;
 line-height: 24px;
-
 color: #000000;
-    
 }
 .arri{
-    position: absolute;
+position: absolute;
 width: 288px;
 height: 30px;
 left: 290px;
 top: 160px;
-
 font-family: 'Inter';
 font-style: normal;
 font-weight: 400;
 font-size: 17px;
 line-height: 24px;
-
 color: #000000;
-
 }
 .pass{
-    
 position: absolute;
 width: 200px;
 height: 30px;
-left: 450px;
-top: 160px;
-
+left: 430px;
+top: 150px;
 font-family: 'Inter';
 font-style: normal;
 font-weight: 500;
-font-size: 18px;
+font-size: 19px;
 line-height: 24px;
-box-shadow:0 0 10px rgba(0, 0, 0, 0.1);
-box-shadow: #000000;
 border-radius: 8px;
 padding: 10px;
-color: #000000;
+color: #4f4f4f;
+}
+.pass1{
+    position: absolute;
+    width: 199px;
+    height: 30px;
+    left: 576px;
+    top: 160px;
+    font: 600;
+    font-size: 19px;
+}
+.dateofjourney{
+    position: absolute;
+    width:90px;
+    height:60px;
+    top:230px;
+    left:65px;
+}
+.dateee{
+    position: absolute;
+    width:90px;
+    height:60px;
+    top:230px;
+    left:130px;
+    font-weight: 500;
+    color: rgb(83, 83, 83);
 }
 .fares{
-    position: absolute;
+position: absolute;
 width: 266px;
 height: 40px;
-left: 280px;
-top: 270px;
-
+left: 440px;
+top: 230px;
 font-family: 'Inter';
 font-style: normal;
 font-weight: 500;
 font-size: 19px;
 line-height: 29px;
-
 color: #000000;
 }
-.sub{
+.rupee2{
     position: absolute;
+    width: 266px;
+    height: 40px;
+    left: 540px;
+    top: 225px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 29px;
+    color: #1258a4;
+}
+.sub{
+position: absolute;
 width: 120px;
 height: 29px;
 left: 280px;
-top: 350px;
+top: 330px;
 font-family: 'Inter';
 font-style: normal;
 font-weight: 400;
 font-size: 20px;
-line-height: 29px;
+line-height: 25px;
 color: #000000;
-background: #1289c07f;
+background: #589ab8f4;
 border-radius: 10px;
 height: 40px;
 }
-
 .qrcode{
     position: absolute;
     left:710px;
     top:250px;
 }
-
 .finalticket{
     position: absolute;
     left:600px;
@@ -185,7 +234,7 @@ height: 40px;
     font-size: 18px;
     font-weight: 11px;
     top:200px;
-    left:40px;
+    left:50px;
 }
 .fdestination{
     position: absolute;
@@ -194,7 +243,6 @@ height: 40px;
     font-weight: 11px;
     top:200px;
     left:250px;
-
 }
 .ftype{
     position: absolute;
@@ -202,7 +250,7 @@ height: 40px;
     font-size: 15px;
     font-weight: 10;
     top:250px;
-    left:40px;
+    left:110px;
 }
 .fpass{
     position: absolute;
@@ -210,7 +258,7 @@ height: 40px;
     font-size: 15px;
     font-weight: 10;
     top:280px;
-    left:40px;
+    left:110px;
 }
 .ffares{
     position: absolute;
@@ -218,8 +266,7 @@ height: 40px;
     font-size: 15px;
     font-weight: 10;
     top:310px;
-    left:40px;
-
+    left:110px;
 }
 .wishes{
     position: absolute;
@@ -227,12 +274,19 @@ height: 40px;
     font-size: 10px;
     font-weight: 1;
     top:410px;
-    left:130px;
-
+    left:110px;
+    letter-spacing: 1px;
 }
 .symbol8{
     position: absolute;
     top:370px;
-    left:90px;
-
+    left:60px;
+}
+.booking-id{
+    position: relative;
+    top:160px;
+    left:95px;
+    color: #1258a4;
+    font-weight: 600;
+    font-size: 11.49px;
 }

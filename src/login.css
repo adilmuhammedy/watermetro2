@@ -179,20 +179,24 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .submit{
-    position: relative;
-    width: 89px;
-    height: 35px;
-    left: 500px;
-    top: 190px;
-    cursor: pointer;
-    font-family: 'Literata';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 25px;
-    border-radius: 10px;
-    border-color: #44C0AA;
-    letter-spacing: 0.05em;
+
+    position: absolute;
+width: 89px;
+height: 30px;
+left: 550px;
+top: 200px;
+cursor: pointer;
+font-family: 'Literata';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 15px;
+/* identical to box height */
+border-radius: 10px;
+border-color: #44C0AA;
+letter-spacing: 0.05em;
+
+
 
     color: #faf9f9;
     border-width: 0px;
@@ -221,7 +225,7 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 .or1 {
   position: absolute;
-  top: 390px;
+  top: 400px;
   left: 560px;
   width: 200px; /* Adjust the width based on your needs */
   font-size: 14px;
@@ -229,7 +233,8 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   color: #000000;
 }
 
-.or-line1 {
+
+.or-line {
   position: relative;
   display: block;
   width: 100%;
@@ -237,6 +242,7 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   background-color: rgb(39, 38, 38);
   margin-top: 10px;
 }
+
 
 .or-text1 {
   position: absolute;
@@ -248,8 +254,8 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 
-
-
+  
+  .google {
   .google1 {
     position: absolute;
     background-color: #4285F4;
@@ -283,7 +289,8 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     height: 20px;
     left:19px;
     margin-right: 8px;
-    background-image: url("https://dl.dropboxusercontent.com/s/wxkx22gf01tygmn/google-logo.png?dl=0");
+    background-image: url("https://dl.dropboxusercontent.com/s/y76omky5qwkj7fw/google-logo.png?dl=0");
+
     background-repeat: no-repeat;
     background-size: cover;
   }

@@ -1,4 +1,4 @@
-import React,  {useState, useEffect ,useRef} from 'react';
+import React,  {useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import './terminals.css';
 import { getAuth,onAuthStateChanged, signOut } from "firebase/auth";
@@ -9,14 +9,12 @@ import Map2 from './Map2';
 import Map3 from './Map3';
 import Map4 from './Map4';
 
-
-//AIzaSyCfnir-sY46pnn-2hNoU05STZBLi8mokFU
 const Terminals = () => {
   const history = useHistory();
   const [displayName, setDisplayName] = useState('');
   const [isUserSignedIn, setIsUserSignedIn] = useState(false);
   const [isOpen, setIsOpen] = useState(false)
-  const containerRef = useRef(null);
+  const [profilePictureUrl, setProfilePictureUrl] = useState('');
   useEffect(() => {
     const firebaseConfig = {
       apiKey: "AIzaSyCGRG2r6MT-CoPN1d-UVrbwhbyWhg0VGyU",
@@ -28,28 +26,24 @@ const Terminals = () => {
       measurementId: "G-CREXXM61GJ"
       // Add your Firebase configuration object here
     };
-
     firebase.initializeApp(firebaseConfig);
-
     const auth = getAuth();
-
     onAuthStateChanged(auth, (user) => {
       if (user) {
         const uid = user.uid;
         const displayName = user.displayName;
         setDisplayName(displayName);
         setIsUserSignedIn(true);
-       
+        const profilePictureUrl = user.photoURL;
+        setProfilePictureUrl(profilePictureUrl);
       } else {
         setIsUserSignedIn(false);
         setDisplayName('');
       }
     });
   }, []);
-
   const handleSignOut = () => {
     const auth = getAuth();
-
     signOut(auth)
       .then(() => {
         setIsUserSignedIn(false);
@@ -63,46 +57,29 @@ const Terminals = () => {
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
-
-
-  const [activeTerminal, setActiveTerminal] = useState(null);
-
-  
-  
-
+  const [activeTerminal, setActiveTerminal] = useState('kakkanad');
   const handleHomeClick = () => {
     history.push('/');
   };
-
   const handleBookTicketsClick = () => {
     history.push('/bookticket');
   };
-
   const handleTerminalsClick = () => {
     history.push('/terminals');
   };
-
   const handleLoginClick = () => {  
     history.push('/login');
   };
-
   const handleFareDetailsClick = () => {
     history.push('/fare');
   };
-
   const handleTerminalClick = (terminal) => {
     setActiveTerminal(terminal);
   };
-    
-
-
-
- 
   const renderTerminalDetails = () => {
     switch (activeTerminal) {
       case 'kakkanad':
         return (
-
           <div className='terminal2'>
             <h3 className='t1'>KAKKANAD </h3>
             <p className='kak'>Kakkanad is a rapidly developing city known for its IT and industrial parks</p>
@@ -113,28 +90,22 @@ const Terminals = () => {
            <Map1/>
            <h3 className='nearby'>Nearby Attractions</h3>
            <p className='attractions'>Discover nearby attractions, create memorable experiences, and embark on unforgettable adventures</p>
-          
-          
-          
             <div className="container">
               <div className='cont1'>
            <div className="item">   
     <img src='https://dl.dropboxusercontent.com/s/vrcbago8ldalwzg/kakkanad1.jpg?dl=0' className='h11' alt='k1'/>
-    
     <h5 className='placce1'>Kakkanad</h5>
     <h3 className='locca1'>Kakkanad Info Park</h3>
     <p className='dessc1'>Largest IT park in Kerala</p>
     </div>
     <div className="item">   
     <img src='https://dl.dropboxusercontent.com/s/jakshzs8o2cprxu/kakkanad2.jpg?dl=0' className='h12' alt='k2'/>
-    
     <h5 className='placce2'>Pallikara</h5>
     <h3 className='locca2'>Wonderla</h3>
     <p className='dessc2'>Amusement Parks</p>
     </div>
     <div className="item">   
     <img src='https://dl.dropboxusercontent.com/s/lx7cr3he4axept7/kakkanad3.jpg?dl=0' className='h13' alt='k3'/>
-      
     <h5 className='placce3'>Thrippunithara</h5>
     <h3 className='locca3'>Hill Palace Museum</h3>
     <p className='dessc3'>Museum</p>
@@ -147,27 +118,20 @@ const Terminals = () => {
     </div>
     <div className="item">   
     <img src='https://dl.dropboxusercontent.com/s/tu60i4xa02d4z9d/kakkanad5.jpg?dl=0' className='h15' alt='k5'/>
-    
     <h5 className='placce5'>Kochi</h5>
     <h3 className='locca5'>Kadambrayar Eco Tourism</h3>
     <p className='dessc5'>Tourist Attraction</p>
     </div>
     <div className="item">   
     <img src='https://dl.dropboxusercontent.com/s/g3huekwstkv3bmd/kakkanad6.jpg?dl=0' className='h16' alt='k6'/>
-    
     <h5 className='placce6'>Kakkanad</h5>
     <h3 className='locca6'>Cochin Special Economic zone</h3>
     <p className='dessc6'>Economic Zone</p>
     </div>
     </div>
     </div>
-   
-
  </div>
-
-          
-   
-        );
+    );
       case 'vyttila':
         return (
           <div className='terminal2'>
@@ -213,10 +177,7 @@ const Terminals = () => {
     </div> 
     </div>
   </div>
- 
-</div>
-
-          
+</div>  
         );
       case 'highcourt':
         return (
@@ -230,7 +191,7 @@ const Terminals = () => {
             <h3 className='nearby'>Nearby Attractions</h3>
             <p className='attractions'>Discover nearby attractions, create memorable experiences, and embark on unforgettable adventures</p>
             <div className="container">
-              <div className='cont1'>
+            <div className='cont1'>
             <div className='item'> 
     <img src='https://dl.dropboxusercontent.com/s/eaq8mi2rmfex6br/highcourt1.jpg?dl=0' className='h11' alt='k1'/>
     <h5 className='placce1'>Marine Drive</h5>
@@ -272,17 +233,11 @@ const Terminals = () => {
     <h5 className='placce7'>Fort Kochi</h5>
     <h3 className='locca7'>Chinese Fishing Nets</h3>
     <p className='dessc7'>Tourist Attraction</p>
-    </div> 
-    <div className="left-button" >&lt;</div>
-    <div className="right-button" >&gt;</div>
-
+    </div>
  </div>
 </div>
-</div>
-
-       
+</div> 
         );
-      
       case 'vypin':
         return (
           <div className='terminal2'> 
@@ -320,7 +275,6 @@ const Terminals = () => {
     <h3 className='locca4'>Chendamangalam Synagogue</h3>
     <p className='dessc4'>Synagogue</p>
     </div>
-
   </div>
 </div>
           </div>
@@ -329,8 +283,6 @@ const Terminals = () => {
         return null;
     }
   };
-
-
   return (
     <div className="Home">
       <header className="home-header">
@@ -345,26 +297,20 @@ const Terminals = () => {
       </header>
       <div className="rectangle"></div>
       <h2 className="book1">TERMINALS</h2>
-
       <div className="rect2">
-        
           <h4 className="kakkanad">KAKKANAD</h4>
             <img src='https://dl.dropboxusercontent.com/s/7ypxoc0yq704q8f/kakkanad.webp?dl=0' className="imgkakkanad-img" alt="kakkanad" onClick={() => handleTerminalClick('kakkanad')} />
-
           {activeTerminal === 'kakkanad' && renderTerminalDetails()}
-
         <div>
           <h4 className="vyttila">VYTTILA</h4>
             <img src='https://dl.dropboxusercontent.com/s/fl5x2cngjqgnypa/vytila.jpg?dl=0' className="imgvyttila" alt="vyttila" onClick={() => handleTerminalClick('vyttila')} />
           {activeTerminal === 'vyttila' && renderTerminalDetails()}
         </div>
-
         <div>
           <h4 className="highcourt">HIGHCOURT</h4>
             <img src="https://dl.dropboxusercontent.com/s/07g29unxg2j6qjo/high-court.jpg?dl=0" className="imghighcourt" alt="highcourt" onClick={() => handleTerminalClick('highcourt')}/>
           {activeTerminal === 'highcourt' && renderTerminalDetails()}
         </div>
-
         <div>
           <h4 className="vypin">VYPIN</h4>
             <img src='https://dl.dropboxusercontent.com/s/2bqz81uew9ja73l/vypin.webp?dl=0' className="imgvypin" alt="vypin" onClick={() => handleTerminalClick('vypin')} />
@@ -373,11 +319,9 @@ const Terminals = () => {
       </div>
       {isUserSignedIn && (
       <div className="dropdown">
-        <img src='https://dl.dropboxusercontent.com/s/uu2hs3juypnf0rd/avatar.png?dl=0' alt="Avatar" className="avatar" onClick={toggleDropdown}></img>
-       
+        <img src={profilePictureUrl} alt="Avatar" className="avatar" onClick={toggleDropdown}></img>
         <div className="welcome-message">
           Welcome, {displayName}!
-          
         </div>
         {isOpen && (
           <ul className="dropdown-menu">
@@ -390,7 +334,5 @@ const Terminals = () => {
       )}
     </div>
   );
-
 }
-
 export default Terminals;

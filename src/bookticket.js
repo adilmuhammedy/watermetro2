@@ -1,13 +1,12 @@
 import React, {useState, useEffect  } from 'react';
 import './bookticket.css';
 import { useHistory } from 'react-router-dom';
-//import logo from 'https://www.dropbox.com/s/zckq71jrgnv4yvf/logo.png?dl=0';
 import QRCode from 'qrcode.react';
 import { getAuth,onAuthStateChanged, signOut } from "firebase/auth";
 import 'firebase/compat/auth';
 import firebase from 'firebase/compat/app';
-//import avatar from 'https://www.dropbox.com/s/uu2hs3juypnf0rd/avatar.png?dl=0';
-//import wmetroVideo from 'https://www.dropbox.com/s/iqlgvwcjhawdl3t/wmetro.mp4?dl=0';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
 const BookTicket = (props) => {
   const history = useHistory();
@@ -16,10 +15,12 @@ const BookTicket = (props) => {
   const [selectedTo, setSelectedTo] = useState("SELECT");
   const [selectedType, setSelectedType] = useState("");
   const [passengerCount, setPassengerCount] = useState("");
+  const [date, setDate] = useState("");
   const [displayName, setDisplayName] = useState('');
   const [isUserSignedIn, setIsUserSignedIn] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
- 
+  const [selectedDate, setSelectedDate] = useState(null);
+  const [profilePictureUrl, setProfilePictureUrl] = useState('');
 
   useEffect(() => {
     const firebaseConfig = {
@@ -30,20 +31,18 @@ const BookTicket = (props) => {
       messagingSenderId: "405368155649",
       appId: "1:405368155649:web:1ffea291743d7123c7da00",
       measurementId: "G-CREXXM61GJ"
-      // Add your Firebase configuration object here
     };
 
     firebase.initializeApp(firebaseConfig);
-
     const auth = getAuth();
-
     onAuthStateChanged(auth, (user) => {
       if (user) {
         const uid = user.uid;
-        const displayName = user.displayName;
-        setDisplayName(displayName);
         setIsUserSignedIn(true);
-       
+        const displayName = user.displayName;
+        const profilePictureUrl = user.photoURL;
+        setDisplayName(displayName);
+        setProfilePictureUrl(profilePictureUrl);
       } else {
         setIsUserSignedIn(false);
         setDisplayName('');
@@ -53,7 +52,6 @@ const BookTicket = (props) => {
 
   const handleSignOut = () => {
     const auth = getAuth();
-
     signOut(auth)
       .then(() => {
         setIsUserSignedIn(false);
@@ -67,77 +65,59 @@ const BookTicket = (props) => {
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
-
   const handleHomeClick = () => {
     history.push('/');
   }
-
   const handleTerminalsClick = () => {
     history.push('/terminals');
   }
-
-
   const handleBookTicketsClick = () => {
     history.push(props.match.path);
   }
-
   const handleFareDetailsClick = () => {
     history.push('/fare');
   }
-
   const handleLoginClick = () => {
     history.push('/login');
   }
-
   const handleFromChange = (event) => {
     const selectedValue = event.target.value;
     setSelectedFrom(selectedValue);
   };
-  
   const handleToChange = (event) => {
     const selectedValue = event.target.value;
     setSelectedTo(selectedValue);
   };
-
   const handleTypeChange = (event) => {
     const selectedValue = event.target.value;
     setSelectedType(selectedValue);
   };
-
   const handlePassengerCountChange = (event) => {
     const count = event.target.value;
     setPassengerCount(count);
   };
-
   const handleSubmit = async (event) => {
     if(!isUserSignedIn){
       alert('Please login to book tickets');
       history.push('/login');
       return
     }
-    
     event.preventDefault();
- 
-
-
-    // Create request body
     const requestBody = {
       from: selectedFrom,
       to: selectedTo,
       ticketType: selectedType,
       nopass: passengerCount,
+      date: selectedDateString
     };
     var from=requestBody.from;
-   var to=requestBody.to;
+    var to=requestBody.to;
     var ticketType=requestBody.ticketType;
     var nopass=requestBody.nopass;
-
     let isValid = true;
     if(from==='SELECT' ||to==='SELECT' || ticketType==='' || nopass===''){
       alert("Please fill all the fields");
       isValid = false;
-    
-      
     }
     else if(from===to){
       alert('Please select different stations' );
@@ -150,9 +130,7 @@ const BookTicket = (props) => {
       (from==="Vypin" && to==="Highcourt"))){
       alert( 'Selected route is not available, sorry!');
       isValid = false;
-    
     }
-
     else if (parseInt(passengerCount) < 1) {
       alert('Number of passengers cannot be negative or zero');
       isValid = false;
@@ -164,10 +142,10 @@ const BookTicket = (props) => {
         from: selectedFrom,
         to: selectedTo,
         ticketType: selectedType,
-        nopass: passengerCount
+        nopass: passengerCount,
+        date: selectedDateString
       }
     });
- 
     try {
       // Make API call to the backend
       const response = await fetch('http://localhost:4000/bookticket', {
@@ -183,12 +161,12 @@ const BookTicket = (props) => {
       setSelectedTo("SELECT");
       setSelectedType("");
       setPassengerCount("");
+      setDate("");
       // Redirect to the current location
       history.push(props.match.path);
             // Parse the response JSON
            console.log("Response:", response);
            const responseData = await response.json();
-
             // Set the QR code data
             setQRCodeData(responseData.qrCode);
     } catch (error) {
@@ -196,14 +174,15 @@ const BookTicket = (props) => {
     }
       history.push('/confirmation');
   }
-  
   }
-
+  const CustomCalendarContainer = ({ children }) => (
+    <div className="calendar-container">{children}</div>
+  );
+  const selectedDateString = selectedDate ? selectedDate.toLocaleDateString() : "";
   return (
     <div className="Home">
       <img src="https://dl.dropboxusercontent.com/s/zckq71jrgnv4yvf/logo.png?dl=0" className="logo" alt="watermetro" />
       <header className="home-header">
-      
         <h4 className="home" onClick={handleHomeClick}>HOME</h4>
         <h4 className="booktickets" onClick={handleBookTicketsClick}>BOOK TICKETS</h4>
         <h4 className="terminals" onClick={handleTerminalsClick}>TERMINALS</h4>
@@ -213,20 +192,15 @@ const BookTicket = (props) => {
         )}
         {isUserSignedIn && (
         <div className="welcome-message">
- 
           Welcome, {displayName}!
-          
         </div>
       )}
       </header>
       <div className="rectangle"></div>
       <h2 className="book1">BOOK TICKETS</h2>
-
-
-
       <div className="bookfrom">
         <form action="#" onSubmit={handleSubmit}>
-          <h4 className="from">FROM</h4>
+          <h4 className="from">From</h4>
           <div className='selectfrom'>
             <select value={selectedFrom} onChange={handleFromChange} className="selectfrom">
               <option value="SELECT">----SELECT----</option>
@@ -236,7 +210,7 @@ const BookTicket = (props) => {
               <option value="Vypin">VYPIN</option>
             </select>
           </div>
-          <h4 className="to">TO</h4>
+          <h4 className="to">To</h4>
           <div className='selectto'>
             <select value={selectedTo} onChange={handleToChange} className="selectto">
               <option value="SELECT">----SELECT----</option>
@@ -255,7 +229,6 @@ const BookTicket = (props) => {
             </select>
           </div>
           <h4 className="nopass">No.of Passengers</h4>
-
             <input 
               type="number"
               placeholder="No.of Passengers"
@@ -263,18 +236,23 @@ const BookTicket = (props) => {
               value={passengerCount}
               onChange={handlePassengerCountChange}
             />
-       
+            <h4 className="sdate">Date</h4>
+            <DatePicker className='dateselect'
+        selected={selectedDate}
+        onChange={(date) => setSelectedDate(date)}
+        calendarContainer={CustomCalendarContainer}
+        dateFormat="dd/MM/yyyy"
+        placeholderText="Select a date"
+        value={selectedDateString}
+      />
           <button type="submit" className="submit1">Submit</button>
         </form>
       </div>
-   
     {isUserSignedIn && (
 <div className="dropdown">
-        <img src="https://dl.dropboxusercontent.com/s/uu2hs3juypnf0rd/avatar.png?dl=0" alt="Avatar" className="avatar" onClick={toggleDropdown}></img>
-       
+        <img src={profilePictureUrl} alt="Avatar" className="avatar" onClick={toggleDropdown}></img>
         <div className="welcome-message">
           Welcome, {displayName}!
-          
         </div>
         {isOpen && (
           <ul className="dropdown-menu">
@@ -285,13 +263,9 @@ const BookTicket = (props) => {
         )}
       </div>
       )}
-
-
-
       <div className="background-video">
       <video autoPlay loop muted>
         <source src="https://dl.dropboxusercontent.com/s/iqlgvwcjhawdl3t/wmetro.mp4?dl=0" type="video/mp4" />
-     
       </video>
     </div>
     </div>
