@@ -3,9 +3,7 @@ import { useHistory } from 'react-router-dom';
 import firebase from 'firebase/compat/app';
 import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 import 'firebase/compat/auth';
-//import logo from 'https://www.dropbox.com/s/zckq71jrgnv4yvf/logo.png?dl=0';
 import './login.css';
-//import avatar from 'https://www.dropbox.com/s/uu2hs3juypnf0rd/avatar.png?dl=0';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -13,24 +11,19 @@ const Login = () => {
   const [displayName, setDisplayName] = useState('');
   const [isUserSignedIn, setIsUserSignedIn] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [profilePictureUrl, setProfilePictureUrl] = useState('');
   const history = useHistory();
-
   const [showDropdown, setShowDropdown] = useState(false);
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
   };
-
-  
-
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
-
   const handlePassChange = (event) => {
     setPassword(event.target.value);
   };
-
   const firebaseConfig = {
     apiKey: "AIzaSyCGRG2r6MT-CoPN1d-UVrbwhbyWhg0VGyU",
     authDomain: "watermetro-69ffe.firebaseapp.com",
@@ -39,13 +32,11 @@ const Login = () => {
     messagingSenderId: "405368155649",
     appId: "1:405368155649:web:1ffea291743d7123c7da00",
     measurementId: "G-CREXXM61GJ"
-    // Add your Firebase configuration object here
   };
 
   firebase.initializeApp(firebaseConfig);
   const auth = getAuth();
   const user = auth.currentUser;
-
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -64,11 +55,9 @@ const Login = () => {
         setIsUserSignedIn(false);
       }
     });
-
     // Cleanup function
     return () => unsubscribe();
   }, [auth, history]);
-
   const handleSubmit = () => {
     firebase
       .auth()
@@ -83,7 +72,6 @@ const Login = () => {
         console.error('Login error:', error);
       });
   };
-
   const provider = new firebase.auth.GoogleAuthProvider();
   const handleGoogleLogin = () => {
     firebase
@@ -92,8 +80,10 @@ const Login = () => {
       .then((result) => {
         // Handle successful login
         const user = result.user;
+        const profilePictureUrl = result.user.photoURL;
+        setProfilePictureUrl(profilePictureUrl);
+        console.log(profilePictureUrl);
         console.log('Logged in user:', user);
-       
         // Redirect to a new page or perform any other actions
         history.push('/');
       })
@@ -103,7 +93,6 @@ const Login = () => {
         // Display an error message or perform any other error handling
       });
   };
-
   const handleSignOut = () => {
     signOut(auth)
       .then(() => {
@@ -111,6 +100,8 @@ const Login = () => {
         setIsUserSignedIn(false);
         console.log('User signed out successfully');
         alert('User signed out successfully');
+        setProfilePictureUrl('');
+        setDisplayName('');
         history.push('/');
       })
       .catch((error) => {
@@ -118,35 +109,27 @@ const Login = () => {
         console.error('Sign-out error:', error);
       });
   };
-
   const handleHomeClick = () => {
     history.push('/');
   };
-
   const handleRegisterClick = () => {
     history.push('/register');
   };
-
   const handleFareDetailsClick = () => {
     history.push('/fare');
   };
-
   const handleBookTicketsClick = () => {
     history.push('/bookticket');
   };
-
   const handleTerminalsClick = () => {
     history.push('/terminals');
   };
-
   const handleLoginClick = () => {
     history.push('/login');
   };
-
   if (isUserSignedIn) {
     return null; // Render nothing if the user is signed in
   }
-
   return (
     <div className="Home">
       <img src="https://dl.dropboxusercontent.com/s/zckq71jrgnv4yvf/logo.png?dl=0" className="logo" alt="watermetro" />
@@ -197,11 +180,9 @@ const Login = () => {
       </div>
       {isUserSignedIn && (
 <div className="dropdown">
-        <img src="https://dl.dropboxusercontent.com/s/uu2hs3juypnf0rd/avatar.png?dl=0" alt="Avatar" className="avatar" onClick={toggleDropdown}></img>
-       
+        <img src={profilePictureUrl} alt="Avatar" className="avatar" onClick={toggleDropdown}></img>    
         <div className="welcome-message">
           Welcome, {displayName}!
-          
         </div>
         {isOpen && (
           <ul className="dropdown-menu">

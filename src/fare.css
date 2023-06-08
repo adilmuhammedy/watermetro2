@@ -376,6 +376,7 @@ box-shadow: 0 2px 5px rgba(5, 5, 5, 0.3);
     top:-218px;
     left: 1350px;
     border-radius: 50%;
+    cursor: pointer;
   }
   .welcome-message1{
     position: absolute;

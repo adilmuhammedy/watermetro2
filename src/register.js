@@ -5,7 +5,6 @@ import firebase from 'firebase/compat/app';
 import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 import 'firebase/compat/auth';
 
-
 const Register = () => {
   const [email, setEmail] = useState('');
   const [pass, setPass] = useState('');
@@ -24,11 +23,9 @@ const Register = () => {
     measurementId: "G-CREXXM61GJ"
     // Add your Firebase configuration object here
   };
-
   firebase.initializeApp(firebaseConfig);
   const auth = getAuth();
   const user = auth.currentUser;
-
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -47,11 +44,9 @@ const Register = () => {
         setIsUserSignedIn(false);
       }
     });
-
     // Cleanup function
     return () => unsubscribe();
   }, [auth, history]);
-
   const provider = new firebase.auth.GoogleAuthProvider();
   const handleGoogleLogin = () => {
     firebase
@@ -61,7 +56,6 @@ const Register = () => {
         // Handle successful login
         const user = result.user;
         console.log('Logged in user:', user);
-       
         // Redirect to a new page or perform any other actions
         history.push('/');
       })
@@ -71,48 +65,37 @@ const Register = () => {
         // Display an error message or perform any other error handling
       });
   };
-
   const handleSubmit = (event) => {
     event.preventDefault();
     // Add your registration logic here
   };
-
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
   };
-
   const handlePassChange = (event) => {
     setPass(event.target.value);
   };
-
   const handleNameChange = (event) => {
     setName(event.target.value);
   };
-
   const handleConpassChange = (event) => {
     setConpass(event.target.value);
   };
-
   const handleHomeClick = () => {
     history.push('/');
   };
-
   const handleBookTicketsClick = () => {
     history.push('/bookticket');
   };
-
   const handleTerminalsClick = () => {
     history.push('/terminals');
   };
-
   const handleLoginClick = () => {
     history.push('/login');
   };
-
   const handleFareDetailsClick = () => {
     history.push('/fare');
   };
-
   return (
     <div className="Home">
       <img
@@ -138,7 +121,6 @@ const Register = () => {
         </h4>
       </header>
       <div className="rectangle"></div>
-
       <h2 className="registerhead">REGISTER</h2>
       <div className="formcontainer">
         <form className="registerform" onSubmit={handleSubmit}>
@@ -201,7 +183,6 @@ const Register = () => {
   <span className="or-line1"></span>
   <span className="or-text1">or</span>
 </p>
-      
         <button className="google1" onClick={handleGoogleLogin}>
           <span className="google-icon1"></span>
           Sign in with Google
@@ -210,5 +191,4 @@ const Register = () => {
       </div>
   );
 };
-
 export default Register;

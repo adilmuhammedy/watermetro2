@@ -5,26 +5,17 @@ import { useLocation } from 'react-router-dom';
 import  { useEffect, useState } from 'react';
 import QRCode from 'qrcode.react';
 
-
-
-
-
-    const Confirmation = (props) => {
-    const history = useHistory();
-    const [fare, setFare] = useState(null);
-    const [error, setError] = useState(null);
-    const [qrCodeData, setQRCodeData] = useState(null);
-  const [showQRCode, setShowQRCode] = useState(false);
-  const [confirmed, setConfirmed] = useState(false);
-  const [bookingId, setBookingId] = useState(null);
-
-
- 
-    
-    const location = useLocation();
+const Confirmation = (props) => {
+const history = useHistory();
+const [fare, setFare] = useState(null);
+const [error, setError] = useState(null);
+const [qrCodeData, setQRCodeData] = useState(null);
+const [showQRCode, setShowQRCode] = useState(false);
+const [confirmed, setConfirmed] = useState(false);
+const [bookingId, setBookingId] = useState(null);
+const location = useLocation();
 const { from, to, ticketType, nopass,date} = location.state  || {};
 console.log('Form Values in confirm page:', from, to, ticketType, nopass,date);
-
 useEffect(() => {
   const fetchFareData = async () => {
     try {
@@ -35,7 +26,6 @@ useEffect(() => {
         },
         body: JSON.stringify({ from, to, ticketType, nopass,date })
       });
-
       if (response.ok) {
         const data = await response.json();
         const { fare } = data;
@@ -46,31 +36,20 @@ useEffect(() => {
     } catch (error) {
       console.error('Error fetching fare data:', error);
     }
-  
   };
   const generateBookingId = () => {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
     let bookingId = '';
-  
     for (let i = 0; i < 15; i++) {
       const randomIndex = Math.floor(Math.random() * characters.length);
       bookingId += characters[randomIndex];
     }
-  
     return bookingId;
   };
-  
-  
-
   fetchFareData();
   const id = generateBookingId();
   setBookingId(id);
 }, [])
-
-
-console.log('Fare:', fare);
-
-
 const handleClick = async () => {
   const data = {
     from,
@@ -80,22 +59,16 @@ const handleClick = async () => {
     fare,
     date
   };
-
   setQRCodeData(JSON.stringify(data));
   setShowQRCode(true);
   setConfirmed(true);
-
 };
-
-  
     const handleHomeClick = () => {
       history.push('/');
     }
-  
     const handleBookTicketsClick = () => {
       history.push('/bookticket');
-    }
-  
+    }  
     const handleTerminalsClick = () => {
       history.push('/terminals');
     }
@@ -128,12 +101,9 @@ const handleClick = async () => {
         <h4 className="pass">Total passengers:</h4><h4 className='pass1'>{nopass}</h4>
         <img src='https://dl.dropboxusercontent.com/s/k7vuqfuqukd349l/date-day-calendar-illustration-on-white-background-creative-icon-vector-removebg-preview.png?dl=0' className='dateofjourney' alt='date'/>
         <h4 className='dateee'>{date}</h4>
-        <p className="fares">Ticket Fare:</p><h4 className='rupee2'>₹{fare}</h4>
-        
+        <p className="fares">Ticket Fare:</p><h4 className='rupee2'>₹{fare}</h4>   
         <button type="submit" className="sub" onClick={ handleClick}>Confirm</button>
-  
       </div>
-    
       {confirmed && showQRCode && qrCodeData &&(
         <>
       <QRCode className="qrcode" value={qrCodeData} />
@@ -141,7 +111,7 @@ const handleClick = async () => {
       <h4 className="fboarding" id="depart"> {from}</h4>
       <img src="https://dl.dropboxusercontent.com/s/3mlket8ojgqlz51/symbol.png?dl=0" className="symbol8" alt="symbol1"/>
         <h4 className="fdestination" id="arrive">{to}</h4>  
-       <h4 className="ftype">Ticket Type: {ticketType}</h4>
+        <h4 className="ftype">Ticket Type: {ticketType}</h4>
         <h4 className="fpass">Total passengers:{nopass}</h4>
         <h4 className="ffares">Ticket Fare: {fare} rs</h4>
         <h5 className="wishes">~ H a p p y    J o u r n e y ~</h5>
@@ -151,11 +121,7 @@ const handleClick = async () => {
       </div>
       </>
     )}
-
-    
     </div>
     );
-
 }                                                                      
-
 export default Confirmation;

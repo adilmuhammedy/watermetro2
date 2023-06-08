@@ -1,24 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
-//import logo from 'https://www.dropbox.com/s/zckq71jrgnv4yvf/logo.png?dl=0';
 import './Homepage.css';
 import { getAuth,onAuthStateChanged, signOut } from "firebase/auth";
 import 'firebase/compat/auth';
 import firebase from 'firebase/compat/app';
-//import metroImage from 'https://www.dropbox.com/s/zdgxbfbv6xzdprb/metro.jpg?dl=0';
-//import metro1Image from 'https://www.dropbox.com/s/8nfx0x79lmoaq1j/metro1.jpg?dl=0';
-//import metro2Image from 'https://www.dropbox.com/s/76kbq7aafv0uec7/metro2.jpg?dl=0';
-//import watermetroImage from 'https://www.dropbox.com/s/fw0zjirgm0jjzke/watermetro.webp?dl=0';
-//import watermetro1Image from 'https://www.dropbox.com/s/x5goz7s1e3qastc/watermetro1.jpg?dl=0';
-//import watermetro2Image from 'https://www.dropbox.com/s/rw3aafar880to65/watermetro2.jpg?dl=0';
-//import avatar from 'https://www.dropbox.com/s/uu2hs3juypnf0rd/avatar.png?dl=0';
-
 
 function Home() {
-  //what is this adilllllllllll
   const [displayName, setDisplayName] = useState('');
   const [isUserSignedIn, setIsUserSignedIn] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [profilePictureUrl, setProfilePictureUrl] = useState('');
   const history = useHistory();
 
   useEffect(() => {
@@ -32,17 +23,16 @@ function Home() {
       measurementId: "G-CREXXM61GJ"
       // Add your Firebase configuration object here
     };
-
     firebase.initializeApp(firebaseConfig);
-
     const auth = getAuth();
-
     onAuthStateChanged(auth, (user) => {
       if (user) {
         const uid = user.uid;
         const displayName = user.displayName;
         setDisplayName(displayName);
         setIsUserSignedIn(true);
+        const profilePictureUrl = user.photoURL;
+        setProfilePictureUrl(profilePictureUrl);
         history.push('/');
       } else {
         setIsUserSignedIn(false);
@@ -53,7 +43,6 @@ function Home() {
 
   const handleSignOut = () => {
     const auth = getAuth();
-
     signOut(auth)
       .then(() => {
         setIsUserSignedIn(false);
@@ -64,33 +53,27 @@ function Home() {
         console.error('Sign-out error:', error);
       });
   };
-
   const toggleDropdown = () => {
       setIsOpen(!isOpen);
     };
   const handleHomeClick = () => {
     history.push('/');
   }
-
   const handleBookTicketsClick = () => {
     history.push('/bookticket');
   }
-
   const handleTerminalsClick = () => {
     history.push('/terminals');
   }
-
   const handleFareDetailsClick = () => {
     history.push('/fare');
   }
-
   const handleLoginClick = () => {
     history.push('/login');
   }
- 
+
   const Slideshow = () => {
-    const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);  
     const images = [
       "https://dl.dropboxusercontent.com/s/zdgxbfbv6xzdprb/metro.jpg?dl=0",
       "https://dl.dropboxusercontent.com/s/8nfx0x79lmoaq1j/metro1.jpg?dl=0",
@@ -99,27 +82,22 @@ function Home() {
       "https://dl.dropboxusercontent.com/s/rw3aafar880to65/watermetro2.jpg?dl=0",
       "https://dl.dropboxusercontent.com/s/x5goz7s1e3qastc/watermetro1.jpg?dl=0",
     ];
-    
     useEffect(() => {
       const interval = setInterval(() => {
         setCurrentImageIndex(prevIndex => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
       }, 2000); // Change image every 2 seconds
-  
       return () => {
         clearInterval(interval); // Clean up the interval on component unmount
       };
     }, []);
-   
     return (
       <div>
         <img className="slide-container" src={images[currentImageIndex]} alt="Slideshow" />
       </div>
     );
   };
-
   return (
-    <div className="Home">
-     
+    <div className="Home"> 
       <img src="https://dl.dropboxusercontent.com/s/zckq71jrgnv4yvf/logo.png?dl=0" className="logo" alt="watermetro" />
       <header className="home-header">
         <h4 className="home" onClick={handleHomeClick}>HOME</h4>
@@ -131,9 +109,7 @@ function Home() {
         )}
         {isUserSignedIn && (
         <div className="welcome-message">
- 
           Welcome, {displayName}!
-          
         </div>
       )}
       </header>
@@ -159,11 +135,9 @@ function Home() {
 </div>
 {isUserSignedIn && (
 <div className="dropdown">
-        <img src="https://dl.dropboxusercontent.com/s/uu2hs3juypnf0rd/avatar.png?dl=0" alt="Avatar" className="avatar" onClick={toggleDropdown}></img>
-       
+        <img src={profilePictureUrl} alt="Avatar" className="avatar" onClick={toggleDropdown}></img>
         <div className="welcome-message">
           Welcome, {displayName}!
-          
         </div>
         {isOpen && (
           <ul className="dropdown-menu">
@@ -175,8 +149,6 @@ function Home() {
       </div>
       )}
     </div>
-   
   );
 }
-
 export default Home;
