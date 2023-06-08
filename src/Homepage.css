@@ -48,8 +48,8 @@
 }
 .logo{
   position: absolute;
-width: 130px;
-height: 130px;
+  width: 130px;
+  height: 130px;
 left: 20px;
 top: -26px;
 }
@@ -256,5 +256,90 @@ top: -26px;
   width:200px;
   right:10px;
   top:100px;
+}
+
+.aboutus{
+  position: relative;
+  top:400px;
+  left:100px;
+  width:1000px;
+}
+.headin{
+  position: relative;
+  left:30px;
+  font-weight: 600;
+  color:#1289c0;
+  font-size: 38px;
+  background: linear-gradient(180deg, #0660b4, #15bbb0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.content{
+  width:100%;
+}
+.details{
+  position: absolute;
+  width:800px;
+  left:30px;
+  font-size: 16px;
+}
+.details1{
+  position: absolute;
+  width:700px;
+  left:650px;
+  top:450px;
+  font-size: 16px;
+}
+.imginside{
+  position: absolute;
+  left:850px;
+  top:120px;
+  width:500px;
+  height:250px;
+}
+.corpit{
+   position: relative;
+   left:40px;
+   top:220px;
+   width:600px;
+   height:390px;
+}
+.waterways{
+  position: relative;
+  top:850px;
+  left:440px;
+  font-size: 23px;
+  color: #065cad;
+}
+.line{
+  position: relative;
+  background-color: #15bbb0;
+  width:130%;
+  height:3px;
+  top:270px;
+  left:30px;
+}
+.routesdetails{
+  position: absolute;
+  top:1000px;
+  left:30px;
+  width:1300px;
+}
+.mapp{
+  position: absolute;
+  top:1220px;
+  width:900px;
+  height:500px;
+  left:200px;
+  overflow: hidden;
+  object-fit: cover;
+}
+.downbar{
+  position: relative;
+  width:152%;
+  height:50px;
+  background-color:#065cad;
+  top:1100px;
+  left:-100px;
 }
 

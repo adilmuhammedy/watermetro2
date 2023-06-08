@@ -197,6 +197,7 @@ const Register = () => {
         <button className="user" onClick={handleLoginClick}>
           Existing user? Login here
         </button>
+        <div className='goo'>
         <p className="or1">
   <span className="or-line1"></span>
   <span className="or-text1">or</span>
@@ -206,6 +207,7 @@ const Register = () => {
           <span className="google-icon1"></span>
           Sign in with Google
         </button>
+      </div>
       </div>
       </div>
   );
