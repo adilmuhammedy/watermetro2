@@ -1,24 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
-//import logo from 'https://www.dropbox.com/s/zckq71jrgnv4yvf/logo.png?dl=0';
 import './Homepage.css';
 import { getAuth,onAuthStateChanged, signOut } from "firebase/auth";
 import 'firebase/compat/auth';
 import firebase from 'firebase/compat/app';
-//import metroImage from 'https://www.dropbox.com/s/zdgxbfbv6xzdprb/metro.jpg?dl=0';
-//import metro1Image from 'https://www.dropbox.com/s/8nfx0x79lmoaq1j/metro1.jpg?dl=0';
-//import metro2Image from 'https://www.dropbox.com/s/76kbq7aafv0uec7/metro2.jpg?dl=0';
-//import watermetroImage from 'https://www.dropbox.com/s/fw0zjirgm0jjzke/watermetro.webp?dl=0';
-//import watermetro1Image from 'https://www.dropbox.com/s/x5goz7s1e3qastc/watermetro1.jpg?dl=0';
-//import watermetro2Image from 'https://www.dropbox.com/s/rw3aafar880to65/watermetro2.jpg?dl=0';
-//import avatar from 'https://www.dropbox.com/s/uu2hs3juypnf0rd/avatar.png?dl=0';
-
 
 function Home() {
-  //what is this adilllllllllll
   const [displayName, setDisplayName] = useState('');
   const [isUserSignedIn, setIsUserSignedIn] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [profilePictureUrl, setProfilePictureUrl] = useState('');
   const history = useHistory();
 
   useEffect(() => {
@@ -32,17 +23,16 @@ function Home() {
       measurementId: "G-CREXXM61GJ"
       // Add your Firebase configuration object here
     };
-
     firebase.initializeApp(firebaseConfig);
-
     const auth = getAuth();
-
     onAuthStateChanged(auth, (user) => {
       if (user) {
         const uid = user.uid;
         const displayName = user.displayName;
         setDisplayName(displayName);
         setIsUserSignedIn(true);
+        const profilePictureUrl = user.photoURL;
+        setProfilePictureUrl(profilePictureUrl);
         history.push('/');
       } else {
         setIsUserSignedIn(false);
@@ -53,7 +43,6 @@ function Home() {
 
   const handleSignOut = () => {
     const auth = getAuth();
-
     signOut(auth)
       .then(() => {
         setIsUserSignedIn(false);
@@ -64,33 +53,27 @@ function Home() {
         console.error('Sign-out error:', error);
       });
   };
-
   const toggleDropdown = () => {
       setIsOpen(!isOpen);
     };
   const handleHomeClick = () => {
     history.push('/');
   }
-
   const handleBookTicketsClick = () => {
     history.push('/bookticket');
   }
-
   const handleTerminalsClick = () => {
     history.push('/terminals');
   }
-
   const handleFareDetailsClick = () => {
     history.push('/fare');
   }
-
   const handleLoginClick = () => {
     history.push('/login');
   }
- 
+
   const Slideshow = () => {
-    const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);  
     const images = [
       "https://dl.dropboxusercontent.com/s/zdgxbfbv6xzdprb/metro.jpg?dl=0",
       "https://dl.dropboxusercontent.com/s/8nfx0x79lmoaq1j/metro1.jpg?dl=0",
@@ -99,27 +82,22 @@ function Home() {
       "https://dl.dropboxusercontent.com/s/rw3aafar880to65/watermetro2.jpg?dl=0",
       "https://dl.dropboxusercontent.com/s/x5goz7s1e3qastc/watermetro1.jpg?dl=0",
     ];
-    
     useEffect(() => {
       const interval = setInterval(() => {
         setCurrentImageIndex(prevIndex => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
       }, 2000); // Change image every 2 seconds
-  
       return () => {
         clearInterval(interval); // Clean up the interval on component unmount
       };
     }, []);
-   
     return (
       <div>
         <img className="slide-container" src={images[currentImageIndex]} alt="Slideshow" />
       </div>
     );
   };
-
   return (
-    <div className="Home">
-     
+    <div className="Home"> 
       <img src="https://dl.dropboxusercontent.com/s/zckq71jrgnv4yvf/logo.png?dl=0" className="logo" alt="watermetro" />
       <header className="home-header">
         <h4 className="home" onClick={handleHomeClick}>HOME</h4>
@@ -131,9 +109,7 @@ function Home() {
         )}
         {isUserSignedIn && (
         <div className="welcome-message">
- 
           Welcome, {displayName}!
-          
         </div>
       )}
       </header>
@@ -170,16 +146,15 @@ The Kochi Water Metro is a significant step towards transforming Kochi's transpo
 <p className='routesdetails'>The project is intending to use the inland waterways in and around Kochi the major share of the waterways are - National Waterways ( NW3) - 40%, Cochin Port Trust Waters - 33%, existing routes under irrigation - 20%, other inland waters -7%. The proposed Water Metro Project comprises of fifteen (15) identified routes connecting thirty eight (38) jetties across ten (10) island communities and 2 boatyards. The overall length of the line lengths of these 15 routes is 76.2 line kilo meters. The water depth required (-2 to -2.50m CD) in channels and - 1.50mCD in approach and jetty pockets. Since major part of the channels are already in use, dredging in these are not significant whereas the approaches from the navigational channel to the terminal area constitute the main part of the dredging. The total dredging is estimated to be in the range of 0.65 million cubic meters.<br></br><br></br>
 There are 15 routes planned as part of this project. These are highlighted in the sketch shown below. The headways shall vary between 10 minutes to 20 minutes across various routes at peak hours. There will be Navigational buoys and night navigational assistance throughout the routes. Water weed and floating waste management is envisaged in this project.</p>
 <img src='https://dl.dropboxusercontent.com/s/6746egknn9ajkiv/map2.png?dl=0' className='mapp' alt='mapp'/>
-<div className='downbar'></div>
+
 </div>
+<div className='downbar'></div>
 
 {isUserSignedIn && (
 <div className="dropdown">
-        <img src="https://dl.dropboxusercontent.com/s/uu2hs3juypnf0rd/avatar.png?dl=0" alt="Avatar" className="avatar" onClick={toggleDropdown}></img>
-       
+        <img src={profilePictureUrl} alt="Avatar" className="avatar" onClick={toggleDropdown}></img>
         <div className="welcome-message">
           Welcome, {displayName}!
-          
         </div>
         {isOpen && (
           <ul className="dropdown-menu">
@@ -191,8 +166,6 @@ There are 15 routes planned as part of this project. These are highlighted in th
       </div>
       )}
     </div>
-   
   );
 }
-
 export default Home;

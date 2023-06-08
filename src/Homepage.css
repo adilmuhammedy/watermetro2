@@ -1,24 +1,20 @@
 .Home {
   position: absolute;
-  width: 80%; /* Adjust the width as per your requirement */
+  width: 100%; 
+  object-fit: cover;
   height: 100%;
-  margin: 0 auto; /* Center the page horizontally */
+  margin: 0 auto; 
+  overflow-x: hidden;
 }
-
-
 .home{
-
   font-size: 150px;
   position: relative;
   left: 800px;
   color: black;
   top:10px;
   display: inline-block;
-  cursor: pointer;
-  
-  
+  cursor: pointer;  
 }
-
 .booktickets{
   color: black;
   font-size: 15px;
@@ -50,8 +46,8 @@
   position: absolute;
   width: 130px;
   height: 130px;
-left: 20px;
-top: -26px;
+  left: 20px;
+  top: -26px;
 }
 .login{
   color: black;
@@ -63,10 +59,10 @@ top: -26px;
   cursor: pointer;
 }
 .rectangle {
-  position: relative; /* Change from absolute to relative */
+  position: relative;
   width: 180px;
   height: 100px;
-  margin-left: auto; /* Add margin-left and margin-right with auto */
+  margin-left: auto; 
   margin-right: auto;
   top: 80px;
   background: #44C0AA;
@@ -84,7 +80,6 @@ top: -26px;
   font:inherit;
   font-size: 22px;
   font-family: 'Lato', sans-serif;
-
   text-shadow: #0d0f0f;
 
 }
@@ -94,15 +89,14 @@ top: -26px;
   color:#1289c0;
   font:inherit;
   font-family: 'Lato', sans-serif;
-
   top:-20px;
   width:550px;
   font-size: 1.675rem;
   line-height: 2.25rem;
   font-weight: 700;
   
-
 }
+
 .descri{
   position: relative;
   top:-30px;
@@ -111,6 +105,7 @@ top: -26px;
   font-size: 18px;
   line-height: 30px;
 }
+
 .boat{
   position:absolute;
   width:800px;
@@ -122,9 +117,8 @@ top: -26px;
   font-size: 28px;background: linear-gradient(180deg, #0660b4, #15bbb0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
-
 }
+
 .route{
   position:absolute;
   width:100px;
@@ -138,6 +132,7 @@ top: -26px;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .kms{
   position:absolute;
   width:160px;
@@ -149,18 +144,15 @@ top: -26px;
   font-size: 28px;
   background: linear-gradient(140deg, #04539d, #15bbb0);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-   
-
-  
+  -webkit-text-fill-color: transparent;  
 }
 
 .slide-container {
   position: relative;
-  width: 60%;
+  width: 48%;
   height:440px;
-  left:245px;
-  float:right;
+  left:750px;
+  float:center;
   margin-top: -155px;
   border-radius: 20px;
 }
@@ -257,12 +249,17 @@ top: -26px;
   right:10px;
   top:100px;
 }
-
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
 .aboutus{
   position: relative;
-  top:400px;
+  top:30px;
   left:100px;
-  width:1000px;
+  width:900px;
 }
 .headin{
   position: relative;
@@ -274,39 +271,37 @@ top: -26px;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.content{
-  width:100%;
-}
 .details{
   position: absolute;
   width:800px;
   left:30px;
   font-size: 16px;
+  top:60px;
 }
 .details1{
   position: absolute;
   width:700px;
   left:650px;
-  top:450px;
+  top:390px;
   font-size: 16px;
 }
 .imginside{
   position: absolute;
   left:850px;
-  top:120px;
+  top:80px;
   width:500px;
   height:250px;
 }
 .corpit{
    position: relative;
    left:40px;
-   top:220px;
+   top:250px;
    width:600px;
    height:390px;
 }
 .waterways{
   position: relative;
-  top:850px;
+  top:740px;
   left:440px;
   font-size: 23px;
   color: #065cad;
@@ -314,20 +309,20 @@ top: -26px;
 .line{
   position: relative;
   background-color: #15bbb0;
-  width:130%;
+  width:142%;
   height:3px;
-  top:270px;
+  top:340px;
   left:30px;
 }
 .routesdetails{
   position: absolute;
-  top:1000px;
+  top:890px;
   left:30px;
   width:1300px;
 }
 .mapp{
   position: absolute;
-  top:1220px;
+  top:1120px;
   width:900px;
   height:500px;
   left:200px;
@@ -336,7 +331,7 @@ top: -26px;
 }
 .downbar{
   position: relative;
-  width:152%;
+  width:134%;
   height:50px;
   background-color:#065cad;
   top:1100px;

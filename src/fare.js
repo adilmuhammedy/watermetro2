@@ -1,19 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './fare.css';
 import { useHistory } from 'react-router-dom';
-//import logo from 'https://www.dropbox.com/s/zckq71jrgnv4yvf/logo.png?dl=0';
-//import logo1 from 'https://www.dropbox.com/s/d95qgh8emiabc32/logo1.png?dl=0';
-//import symbol1 from 'https://www.dropbox.com/s/3mlket8ojgqlz51/symbol.png?dl=0';
-//import symbolHover from 'https://www.dropbox.com/s/tybfl625ng9iokp/symbol-hover.png?dl=0';
-//import ecoFriendly from 'https://www.dropbox.com/s/b2c82s75rm4vi7i/ecoFriendly.png?dl=0';
-//import clockFast from 'https://www.dropbox.com/s/k4mjbcxy07o4o3h/clock.png?dl=0';
-//import comfortGiven from 'https://www.dropbox.com/s/cjmgdpac34cfhat/comfort.png?dl=0';
-//import eMobility from 'https://www.dropbox.com/s/yli52l2a10chb7s/e-mobility.png?dl=0';
-
 import { getAuth,onAuthStateChanged, signOut } from "firebase/auth";
 import 'firebase/compat/auth';
 import firebase from 'firebase/compat/app';
-//import avatar from 'https://www.dropbox.com/s/uu2hs3juypnf0rd/avatar.png?dl=0';
 
 const FareDetails = (props) => {
   const history = useHistory();
@@ -30,9 +20,8 @@ const FareDetails = (props) => {
   const [isUserSignedIn, setIsUserSignedIn] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [submitted,setSubmitted] = useState(false);
-
+  const [profilePictureUrl, setProfilePictureUrl] = useState('');
   
-
   useEffect(() => {
     const firebaseConfig = {
       apiKey: "AIzaSyCGRG2r6MT-CoPN1d-UVrbwhbyWhg0VGyU",
@@ -44,28 +33,24 @@ const FareDetails = (props) => {
       measurementId: "G-CREXXM61GJ"
       // Add your Firebase configuration object here
     };
-
     firebase.initializeApp(firebaseConfig);
-
     const auth = getAuth();
-
     onAuthStateChanged(auth, (user) => {
       if (user) {
         const uid = user.uid;
         const displayName = user.displayName;
         setDisplayName(displayName);
         setIsUserSignedIn(true);
-       
+        const profilePictureUrl = user.photoURL;
+        setProfilePictureUrl(profilePictureUrl);
       } else {
         setIsUserSignedIn(false);
         setDisplayName('');
       }
     });
   }, []);
-
   const handleSignOut = () => {
     const auth = getAuth();
-
     signOut(auth)
       .then(() => {
         setIsUserSignedIn(false);
@@ -81,69 +66,56 @@ const FareDetails = (props) => {
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
-
   const handleHomeClick = () => {
     history.push('/');
   }
-  
-
   const handleTerminalsClick = () => {
     history.push('/terminals');
   }
   const handleSymbolMouseEnter = () => {
     setIsSymbolHovered(true);
   };
-  
   const handleSymbolMouseLeave = () => {
     setIsSymbolHovered(false);
   };
   const ecofriendlyon = () => {
     setIsEcoFriendly(true);
   };
-  
   const ecofriendlyoff = () => {
     setIsEcoFriendly(false);
   };
   const clockon = () => {
     setIsClockFast(true);
   };
-  
   const clockoff = () => {
     setIsClockFast(false);
   };
   const comforton = () => {
     setIsComfortGiven(true);
   };
-  
   const comfortoff = () => {
     setIsComfortGiven(false);
   };
   const eon = () => {
     setIsEMobility(true);
   };
-  
   const eoff = () => {
     setIsEMobility(false);
   };
-  
   const handleBookTicketsClick = () => {
     history.push('/bookticket');
   }
-
   const handleFareDetailsClick = () => {
     history.push('/fare');
   }
-
   const handleLoginClick = () => {
     history.push('/login');
   }
-
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log('From is', from);
     console.log('To is', to); 
     console.log('Ticket type is', ticketType);
-
     let isValid = true;
     if (from === 'SELECT' || to === 'SELECT' || ticketType === '') {
       alert('Please fill all the fields');
@@ -162,7 +134,6 @@ const FareDetails = (props) => {
       alert('Selected route is not available, sorry!');
       isValid = false;
     }
-
     if (isValid) {
       // Calculate the fare based on the selected options
       if (from === "Kakkanad" && to === "Vyttila" && ticketType === "One-way") {
@@ -186,15 +157,9 @@ const FareDetails = (props) => {
       } else {
         setFare("0"); // Reset the fare if none of the conditions match
       }
-      console.log('Fare is dash rupee', fare);
       setSubmitted(true);
-      // Reset the form
-      //setFrom('');
-      //setTo('');
-      //setTicketType('');
     }
   };
-
   return (
     <>
       <div className="Home">
@@ -207,7 +172,6 @@ const FareDetails = (props) => {
           {!isUserSignedIn && (
         <h4 className="login" onClick={handleLoginClick} >LOGIN</h4>
         )}
-
         </header>
         <div className="rectangle"></div>
       </div>
@@ -254,6 +218,7 @@ const FareDetails = (props) => {
                <p className='place1'>{to}</p>
                <p className='ttype'>Ticket Type: {ticketType}</p>
                <img src="https://dl.dropboxusercontent.com/s/3mlket8ojgqlz51/symbol.png?dl=0" className="symbolll" alt="symbol1"/>
+
                <p className='time'>Time taken for your journey:20 minutes</p>
         <h3 className="rupee">₹{fare}</h3>
         <div className="icons">
@@ -262,10 +227,9 @@ const FareDetails = (props) => {
           src={isSymbolHovered ? "https://dl.dropboxusercontent.com/s/tybfl625ng9iokp/symbol-hover.png" : "https://dl.dropboxusercontent.com/s/tybfl625ng9iokp/symbol-hover.png"}
           className={`symbol ${isSymbolHovered ? 'hovered' : ''}`}
           alt="symbol"
-           onMouseEnter={handleSymbolMouseEnter}
-          onMouseLeave={handleSymbolMouseLeave}
+            onMouseEnter={handleSymbolMouseEnter}
+            onMouseLeave={handleSymbolMouseLeave}
           />
-
           </div>
           {isSymbolHovered && (
             <p className="related-text">Disable-Friendly</p>
@@ -321,10 +285,9 @@ const FareDetails = (props) => {
         </div>
         </div>
            )}
-          
         {isUserSignedIn && (
           <div className="dropdown1">
-            <img src="https://dl.dropboxusercontent.com/s/uu2hs3juypnf0rd/avatar.png?dl=0" alt="Avatar" className="avatar1" onClick={toggleDropdown} />
+            <img src={profilePictureUrl} alt="Avatar" className="avatar1" onClick={toggleDropdown} />
             <div className="welcome-message1">
               Welcome, {displayName}!
             </div>
