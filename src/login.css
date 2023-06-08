@@ -14,7 +14,88 @@
 
     color: #fefefe;
 }
+.rectangle1 {
+  position: relative; /* Change from absolute to relative */
+  width: 125%;
+  height: 100px;
+  margin-left: auto; /* Add margin-left and margin-right with auto */
+  margin-right: auto;
+  top: 30px;
+  background:#44C0AA;
+  
+}
+.back{
+  background-size: cover;
+  background-position: center;
+  width: 50%;
+  margin-top:-125px;
+  margin-left: -30px;;
+  height: 230px; /* Adjust the height as needed */
+}
 
+.wave-anime {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 1540px;
+  height: 20px;
+  overflow: hidden;
+}
+
+.wave-anime path {
+  fill: #2577cf81;
+  animation: waveFlow 3s linear infinite;
+}
+
+@keyframes waveFlow {
+  0% {
+    transform: translateX(-35px);
+  }
+  50% {
+    transform: translateX(35px);
+  }
+  100% {
+    transform: translateX(-35px);
+  }
+}
+
+.wave-anime1 {
+  position: absolute;
+  top:60px;
+  left: 0;
+  width: 1540px;
+  height: 20px;
+  overflow: hidden;
+}
+
+.wave-anime1 path {
+  fill: #2e7ed378;
+  animation: waveFlow2 8s linear infinite;
+}
+
+@keyframes waveFlow2 {
+  0% {
+    transform: translateX(40px);
+  }
+  50% {
+    transform: translateX(-40px);
+  }
+  100% {
+    transform: translateX(40px);
+  }
+}
+
+
+
+.boatingimg{
+  position: relative;
+  background-size:auto;
+  width:350px;
+  height: 350px; 
+  top:100px;/* Adjust the height as needed */
+  left:120px;
+  border-radius: 10px;
+}
 .formcontainer,.loginform{
         display:flex;
         flex-direction:column;
@@ -98,6 +179,7 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .submit{
+
     position: absolute;
 width: 89px;
 height: 30px;
@@ -114,39 +196,20 @@ border-radius: 10px;
 border-color: #44C0AA;
 letter-spacing: 0.05em;
 
-color: #faf9f9;
-border-width: 0px;
 
-background-color: #44C0AA;
+
+    color: #faf9f9;
+    border-width: 0px;
+
+    background-color: #44C0AA;
 }
-.noaccount{
-    position: absolute;
-width: 200px;
-height: 24px;
-left: 565px;
-top: 370px;
-cursor: pointer;
-font-family: 'Literata';
-font-style: normal;
-font-weight: 300;
-font-size: 13px;
-line-height: 24px;
-/* identical to box height */
-border-color: #FFFFFF;
-background-color: #FFFFFF;
-border-width: 0px;
 
-letter-spacing: 0.02em;
-
-color: #000000;
-
-}
 .noaccount {
   position: absolute;
   width: 200px;
   height: 24px;
   left: 565px;
-  top: 370px;
+  top: 350px;
   cursor: pointer;
   font-family: 'Literata';
   font-style: normal;
@@ -160,8 +223,7 @@ color: #000000;
   letter-spacing: 0.02em;
   color: #000000;
 }
-
-.or {
+.or1 {
   position: absolute;
   top: 400px;
   left: 560px;
@@ -170,6 +232,7 @@ color: #000000;
   text-align: center;
   color: #000000;
 }
+
 
 .or-line {
   position: relative;
@@ -180,7 +243,8 @@ color: #000000;
   margin-top: 10px;
 }
 
-.or-text {
+
+.or-text1 {
   position: absolute;
   top: -25px; /* Adjust the vertical position of the "OR" text */
   left: 50%;
@@ -189,8 +253,10 @@ color: #000000;
   padding: 0 5px;
 }
 
+
   
   .google {
+  .google1 {
     position: absolute;
     background-color: #4285F4;
     color: #ffffff;
@@ -208,20 +274,23 @@ color: #000000;
     justify-content: center;
   }
   
-  .google:hover,
-  .google:focus {
-    background-color: #d3bc89;
+  .google1:hover,
+  .google1:focus {
+    background-color: #e8d09c;
     /* Add more styles for hover and focus states */
     color: #fff;
     /* Additional styles */
     border-radius: 4px;
   }
   
-  .google .google-icon {
+  .google1 .google-icon1 {
+    position:absolute;
     width: 20px;
     height: 20px;
+    left:19px;
     margin-right: 8px;
     background-image: url("https://dl.dropboxusercontent.com/s/y76omky5qwkj7fw/google-logo.png?dl=0");
+
     background-repeat: no-repeat;
     background-size: cover;
   }
