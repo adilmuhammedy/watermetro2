@@ -167,6 +167,11 @@
     position: absolute;
     top:130px;
     left:328px;
+}
+.boatimg{
+    position: relative;
+    top:-15px;
+    left:230px;
     width:170px;
     height:40px;
 }

@@ -252,25 +252,25 @@ const Terminals = () => {
             <div className="container">
             <div className='recttt'>
             <div className='item'> 
-    <img src='https://dl.dropboxusercontent.com/s/q66dfowhcybzse2/vypin1.jpg?dl=0' className='k1' alt='k1'/>
+    <img src='https://dl.dropboxusercontent.com/s/q66dfowhcybzse2/vypin1.jpg?dl=0' className='h11' alt='k1'/>
     <h5 className='placce1'>Vypin Island</h5>
     <h3 className='locca1'>Cherai Beach</h3>
     <p className='dessc1'>Beach</p>
     </div>
     <div className='item'> 
-    <img src='https://dl.dropboxusercontent.com/s/a6lvtcngsw2ac7v/vypin2.webp?dl=0' className='k2' alt='k2'/>
+    <img src='https://dl.dropboxusercontent.com/s/a6lvtcngsw2ac7v/vypin2.webp?dl=0' className='h12' alt='k2'/>
     <h5 className='placce2'>Puthuvype</h5>
     <h3 className='locca2'>Puthuvype Lighthouse</h3>
     <p className='dessc2'>Light House</p>
     </div>
     <div className='item'> 
-    <img src='https://dl.dropboxusercontent.com/s/pnbcjqd5detqyag/vypin3.jpg?dl=0' className='k3' alt='k3'/>
+    <img src='https://dl.dropboxusercontent.com/s/pnbcjqd5detqyag/vypin3.jpg?dl=0' className='h13' alt='k3'/>
     <h5 className='placce3'>Vypin</h5>
     <h3 className='locca3'>Kuzhupilly Beach</h3>
     <p className='dessc3'>Beach</p>
     </div>
     <div className='item'> 
-    <img src='https://dl.dropboxusercontent.com/s/stgki9v81qalb2d/vypin4.jpg?dl=0' className='k4' alt='k4'/>
+    <img src='https://dl.dropboxusercontent.com/s/stgki9v81qalb2d/vypin4.jpg?dl=0' className='h14' alt='k4'/>
     <h5 className='placce4'>Vypin</h5>
     <h3 className='locca4'>Chendamangalam Synagogue</h3>
     <p className='dessc4'>Synagogue</p>
