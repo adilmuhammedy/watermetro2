@@ -1,25 +1,25 @@
 .ticket{
-position: absolute;
-width: 390px;
-height: 40px;
-left: 50px;
-top: 20px;
-font-family: 'Inter';
-font-style: normal;
-font-weight: 700;
-font-size: 20px;
-line-height: 39px;
-color: #000000;
+    position: absolute;
+    width: 390px;
+    height: 40px;
+    left: 50px;
+    top: 20px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 39px;
+    color: #000000;
 }
 .rectan{
-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
-position: absolute;
-width: 700px;
-height: 400px;
-left: 380px;
-top: 250px;
-background: #fcfdfd;
-border-radius: 20px;
+    box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    width: 700px;
+    height: 400px;
+    left: 380px;
+    top: 250px;
+    background: #fcfdfd;
+    border-radius: 20px;
 }
 .from8{
     position: relative;
@@ -30,19 +30,19 @@ border-radius: 20px;
     left:100px;
 }
 .boarding{
-position: absolute;
-width: 200px;
-height: 30px;
-left: 80px;
-top: 90px;
-font-family: 'Inter';
-font-style: normal;
-font-weight: 600;
-font-size: 20px;
-line-height: 24px;
-border-radius: 8px;
-padding: 10px;
-color: #000000;
+    position: absolute;
+    width: 200px;
+    height: 30px;
+    left: 80px;
+    top: 90px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    border-radius: 8px;
+    padding: 10px;
+    color: #000000;
 }
 .to8{
     position: relative;
@@ -61,19 +61,19 @@ color: #000000;
     top:115px;
 }
 .destination{
-position: absolute;
-width: 200px;
-height: 30px;
-left: 420px;
-top: 93px;
-font-family: 'Inter';
-font-style: normal;
-font-weight: 600;
-font-size: 20px;
-line-height: 24px;
-border-radius: 8px;
-padding: 10px;
-color: #000000;
+    position: absolute;
+    width: 200px;
+    height: 30px;
+    left: 420px;
+    top: 93px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    border-radius: 8px;
+    padding: 10px;
+    color: #000000;
 }
 .routemap{
     position: relative;
@@ -98,7 +98,7 @@ color: #000000;
     color: #4b4b4b;
 }
 .type8{
-     position: absolute;
+    position: absolute;
     width: 199px;
     height: 30px;
     left: 200px;
@@ -107,45 +107,45 @@ color: #000000;
     font-size: 17px;
 }
 .deep{
-position: absolute;
-width: 368px;
-height: 35px;
-left: 290px;
-top: 80px;
-font-family: 'Inter';
-font-style: normal;
-font-weight: 400;
-font-size: 17px;
-line-height: 24px;
-color: #000000;
+    position: absolute;
+    width: 368px;
+    height: 35px;
+    left: 290px;
+    top: 80px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 24px;
+    color: #000000;
 }
 .arri{
-position: absolute;
-width: 288px;
-height: 30px;
-left: 290px;
-top: 160px;
-font-family: 'Inter';
-font-style: normal;
-font-weight: 400;
-font-size: 17px;
-line-height: 24px;
-color: #000000;
+    position: absolute;
+    width: 288px;
+    height: 30px;
+    left: 290px;
+    top: 160px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 24px;
+    color: #000000;
 }
 .pass{
-position: absolute;
-width: 200px;
-height: 30px;
-left: 430px;
-top: 150px;
-font-family: 'Inter';
-font-style: normal;
-font-weight: 500;
-font-size: 19px;
-line-height: 24px;
-border-radius: 8px;
-padding: 10px;
-color: #4f4f4f;
+    position: absolute;
+    width: 200px;
+    height: 30px;
+    left: 430px;
+    top: 150px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 24px;
+    border-radius: 8px;
+    padding: 10px;
+    color: #4f4f4f;
 }
 .pass1{
     position: absolute;
@@ -173,17 +173,17 @@ color: #4f4f4f;
     color: rgb(83, 83, 83);
 }
 .fares{
-position: absolute;
-width: 266px;
-height: 40px;
-left: 440px;
-top: 230px;
-font-family: 'Inter';
-font-style: normal;
-font-weight: 500;
-font-size: 19px;
-line-height: 29px;
-color: #000000;
+    position: absolute;
+    width: 266px;
+    height: 40px;
+    left: 440px;
+    top: 230px;
+    font-family: 'Inter';   
+    font-style: normal;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 29px;
+    color: #000000;
 }
 .rupee2{
     position: absolute;
@@ -199,20 +199,20 @@ color: #000000;
     color: #1258a4;
 }
 .sub{
-position: absolute;
-width: 120px;
-height: 29px;
-left: 280px;
-top: 330px;
-font-family: 'Inter';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 25px;
-color: #000000;
-background: #589ab8f4;
-border-radius: 10px;
-height: 40px;
+    position: absolute;
+    width: 120px;
+    height: 29px;
+    left: 280px;
+    top: 330px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    color: #000000;
+    background: #589ab8f4;
+    border-radius: 10px;
+    height: 40px;
 }
 .qrcode{
     position: absolute;
@@ -250,7 +250,7 @@ height: 40px;
     font-size: 15px;
     font-weight: 10;
     top:250px;
-    left:110px;
+    left:100px;
 }
 .fpass{
     position: absolute;
@@ -258,7 +258,7 @@ height: 40px;
     font-size: 15px;
     font-weight: 10;
     top:280px;
-    left:110px;
+    left:100px;
 }
 .ffares{
     position: absolute;
@@ -266,7 +266,7 @@ height: 40px;
     font-size: 15px;
     font-weight: 10;
     top:310px;
-    left:110px;
+    left:100px;
 }
 .wishes{
     position: absolute;
