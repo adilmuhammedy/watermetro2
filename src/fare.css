@@ -1,169 +1,146 @@
 .faredata{
-    position:absolute;
+  position:absolute;
   width: 500px; /* Adjust the width as per your requirement */
   height: 100%;
   margin: 0 auto; 
 }
-.fare{
-   
+.fare{ 
     position: absolute;
     width: 449px;
     height: 50px;
     left: 40px;
     top: 70px;
-    
     font-family: 'Akshar';
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
     line-height: 70px;
     letter-spacing: 0.05em;
-
     color: #fefefe;
 }
 .rect{
     position: absolute;
-width: 400px;
-height: 400px;
-left: 100px;
-top: 230px;
-
-background: #4179A2;
-border-radius: 30px;
+    width: 400px; 
+    height: 400px;
+    left: 100px;
+    top: 230px;
+    background: #4179A2;
+    border-radius: 30px;
 }
 .calcu{
     position: absolute;
-width: 200px;
-height: 24px;
-left: 90px;
-top: 15px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 700;
-font-size: 20px;
-line-height: 24px;
-
-color: #FFFFFF;
+    width: 200px;
+    height: 24px;
+    left: 90px;
+    top: 15px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
 }
 .from1{
     position: absolute;
-width: 59px;
-height: 24px;
-left: 25px;
-top: 50px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 24px;
-
-color: #FFFFFF;
+    width: 59px;
+    height: 24px;
+    left: 25px;
+    top:50px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #FFFFFF;
 }
 .selectfrom1{
-    
     position: absolute;
     top: 103px;
     width:300px;
     left: 20px;
-  
     border-radius: 6px;
     color: #333;
     font-size: 14px;
     padding: 5px;
 }
 .selectto1{
-    
     position: absolute;
     top: 180px;
     width:300px;
     left: 20px;
-  
     border-radius: 6px;
     color: #333;
     font-size: 14px;
     padding: 5px;
     }
-
-    .type1{
-        position: absolute;
-        top: 250px;
-        left: 20px;
-        width:150px;
-       
-        border-radius: 4px;
-        color: #333;
-        font-size: 14px;
-        padding: 5px;
-
-    }
-
-    .button1{
-        position: absolute;
-        top: 340px;
-        left: 120px;
-        width:150px;
-        height:40px;
-        cursor: pointer;
-        border-radius: 4px;
-        color: #333;
-        font-size: 14px;
-        padding: 5px;
-        background: #44C0AA;
-        border-color:#44C0AA ;
-    }
-    .to1{
-        position: absolute;
-width: 29px;
-height: 24px;
-left: 25px;
-top: 130px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 400;
-font-size:14px;
-line-height: 24px;
-
-color: #FFFFFF;
-    }
+.type1{
+    position: absolute;
+    top: 250px;
+    left: 20px;
+    width:150px;
+    border-radius: 4px;
+    color: #333;
+    font-size: 14px;
+    padding: 5px;
+}
+.button1{
+    position: absolute;
+    top: 340px;
+    left: 120px;
+    width:150px;
+    height:40px;
+    cursor: pointer;
+    border-radius: 4px;
+    color: #333;
+    font-size: 14px;
+    padding: 5px;
+    background: #44C0AA;
+    border-color:#44C0AA ;
+}
+.to1{
+    position: absolute;
+    width: 29px;
+    height: 24px;
+    left: 25px;
+    top: 130px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size:14px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
 .tickettype1{
     position: absolute;
     width: 100px;
     height: 24px;
     left: 25px;
-    top: 200px;
-    
+    top: 200px;    
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
-    
     color: #FFFFFF;
 }
 .recta{
     box-sizing: border-box;
-
-position: absolute;
-width: 850px;
-height: 230px;
-left: 500px;
-top: 80px;
-
-border: none; /* Remove border */
-border-radius: 10px;
-box-shadow: 0 2px 5px rgba(5, 5, 5, 0.3);
+    position: absolute;
+    width: 850px;
+    height: 230px;
+    left: 500px;
+    top: 80px;
+    border: none; /* Remove border */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(5, 5, 5, 0.3);
 }
 .metro9{
     position:relative;
-    
     left:20px;
     color:#030303c6;
-  font:200;
-  font-size: 18px;
-  font-family: 'Lato', sans-serif;
+    font:200;
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
 }
 .logo1{
     position: relative;
@@ -211,23 +188,16 @@ box-shadow: 0 2px 5px rgba(5, 5, 5, 0.3);
     position:absolute;
     left:-400px;
     top:-80px;
-    
-
 }
-
 .symbol {
     position: relative;
-
     cursor: pointer;
     width:30px;
     height:30px;
     left:1000px;
     top:100px;
   }
-
-  
-  
-  .related-text {
+.related-text {
     position: relative;
     display: block;
     left:970px;
@@ -236,7 +206,7 @@ box-shadow: 0 2px 5px rgba(5, 5, 5, 0.3);
     font-weight: 500;
 
   }
-  .symbol1 {
+.symbol1 {
     position: absolute;
     transition: filter 0.3s ease;
     cursor: pointer;
@@ -245,10 +215,7 @@ box-shadow: 0 2px 5px rgba(5, 5, 5, 0.3);
     left:1040px;
     top:98px;
   }
-  
-
-  
-  .related-text1 {
+.related-text1 {
     position:relative;
     display: block;
     left:1020px;
@@ -256,7 +223,7 @@ box-shadow: 0 2px 5px rgba(5, 5, 5, 0.3);
     color: #26a38c;
     font-weight: 500;
   }
-  .symbol2 {
+.symbol2 {
     position:absolute;
     transition: filter 0.3s ease;
     cursor: pointer;
@@ -265,9 +232,7 @@ box-shadow: 0 2px 5px rgba(5, 5, 5, 0.3);
     left:1080px;
     top:96px;
   }
-
-  
-  .related-text2 {
+.related-text2 {
     position: relative;
     display: block;
     left:1030px;
@@ -275,7 +240,7 @@ box-shadow: 0 2px 5px rgba(5, 5, 5, 0.3);
     color: #26a38c;
     font-weight: 500;
   }
-  .symbol3 {
+.symbol3 {
     position: absolute;
     transition: filter 0.3s ease;
     cursor: pointer;
@@ -283,9 +248,8 @@ box-shadow: 0 2px 5px rgba(5, 5, 5, 0.3);
     height:37px;
     left:1125px;
     top:98px;
-  }
-
-  .related-text3 {
+}
+.related-text3 {
     position: relative;
     display: block;
     left:1115px;
@@ -293,7 +257,7 @@ box-shadow: 0 2px 5px rgba(5, 5, 5, 0.3);
     color: #26a38c;
     font-weight: 500;
   }
-  .symbol4 {
+.symbol4 {
     position: absolute;
     transition: filter 0.3s ease;
     cursor: pointer;
@@ -301,26 +265,21 @@ box-shadow: 0 2px 5px rgba(5, 5, 5, 0.3);
     height:35px;
     left:1163px;
     top:98px;
-  }
-  
-  
-  .related-text4 {
+}
+.related-text4 {
     position: relative;
     display: block;
     left:1145px;
     top:84px;
     color: #26a38c;
     font-weight: 500;
-  }
-  
+}
 .dropdown {
     position: absolute;
     display: inline-block;
     top:20px;
     left: 1450px;
-    
   }
-  
   button {
     border: 1px solid #ccc;
     padding: 8px 12px;
@@ -329,8 +288,7 @@ box-shadow: 0 2px 5px rgba(5, 5, 5, 0.3);
     height: 50px;
     border-radius: 50%;
   }
-  
-  .dropdown-menu1 {
+.dropdown-menu1 {
     position: absolute;
     top: -160px;
     left:1270px;
@@ -342,34 +300,29 @@ box-shadow: 0 2px 5px rgba(5, 5, 5, 0.3);
     list-style-type:none;
     padding: 0;
     margin: 0;
-  }
-  
-  .dropdown-menu1 li {
+}
+.dropdown-menu1 li {
     padding: 8px 12px;
     cursor: pointer;
     border-color: #000000;
     box-sizing: border-box;
     border-width: 5px;;
-  }
-  
-  .dropdown-menu1 li:hover {
+  }  
+.dropdown-menu1 li:hover {
     background-color: #f0f0f0;
-  }
-  
-  .dropdown-menu1 li {
+}
+.dropdown-menu1 li {
     padding: 8px 12px;
     cursor: pointer;
     box-sizing: border-box;
-  }
-  
-  .dropdown-menu1 li:not(:last-child) {
+}  
+.dropdown-menu1 li:not(:last-child) {
     border-bottom: 1px solid #ccc;
-  }
-  
-  .dropdown-menu1 li:hover {
+  }  
+.dropdown-menu1 li:hover {
     background-color: #f0f0f0;
   }
-  .avatar1 {
+.avatar1 {
     position: absolute;
     width: 50px;
     height: 50px;
@@ -377,8 +330,8 @@ box-shadow: 0 2px 5px rgba(5, 5, 5, 0.3);
     left: 1350px;
     border-radius: 50%;
     cursor: pointer;
-  }
-  .welcome-message1{
+}
+.welcome-message1{
     position: absolute;
     left:1140px;
     top:-110px;
@@ -386,10 +339,9 @@ box-shadow: 0 2px 5px rgba(5, 5, 5, 0.3);
     color: #FFFFFF;
     font-weight: 500;
     font-size: 19px;
-  }
-  .ttype{
+}
+.ttype{
     position:absolute;
     left:600px;
     top:60px;
-  }
-  
+  }  
