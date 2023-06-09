@@ -12,6 +12,7 @@ const Register = () => {
   const [isUserSignedIn, setIsUserSignedIn] = useState(false);
   const [displayName, setDisplayName] = useState('');
   const [conpass, setConpass] = useState('');
+  const [profilePictureUrl, setProfilePictureUrl] = useState('');
   const history = useHistory();
   const firebaseConfig = {
     apiKey: "AIzaSyCGRG2r6MT-CoPN1d-UVrbwhbyWhg0VGyU",
@@ -34,6 +35,8 @@ const Register = () => {
         const displayName = user.displayName;
         const email = user.email;
         const photoURL = user.photoURL;
+        const profilePictureUrl = user.photoURL;
+        setProfilePictureUrl(profilePictureUrl);
         const emailVerified = user.emailVerified;
         console.log(displayName, email, photoURL, emailVerified);
         setDisplayName(displayName);

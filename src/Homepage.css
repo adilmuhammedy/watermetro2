@@ -65,7 +65,7 @@
   margin-left: auto; 
   margin-right: auto;
   top: 80px;
-  background: #44C0AA;
+  background: #137BC7;
   
 }
 .homepagee{
@@ -76,9 +76,10 @@
 .metro{
   position:relative;
   left:30px;
-  color:#44C0AA;
+  color:#585458b7;
   font:inherit;
   font-size: 22px;
+  font-weight: 700;
   font-family: 'Lato', sans-serif;
   text-shadow: #0d0f0f;
 
@@ -86,14 +87,15 @@
 .heading{
   position:relative;
   left:30px;
-  color:#1289c0;
+  color:#44C0AA;
   font:inherit;
   font-family: 'Lato', sans-serif;
   top:-20px;
   width:550px;
   font-size: 1.675rem;
-  line-height: 2.25rem;
   font-weight: 700;
+  line-height: 2.25rem;
+
   
 }
 
@@ -114,7 +116,7 @@
   left:100px;
   text-shadow: #0d0f0f;
   color:#1289c0;
-  font-size: 28px;background: linear-gradient(180deg, #0660b4, #15bbb0);
+  font-size: 28px;background: linear-gradient(180deg, #0660b4, #15bb97);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
