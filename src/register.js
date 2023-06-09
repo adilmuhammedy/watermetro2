@@ -70,25 +70,7 @@ const Register = () => {
     // Add your registration logic here
   };
 
-  const provider = new firebase.auth.GoogleAuthProvider();
-  const handleGoogleLogin = () => {
-    firebase
-      .auth()
-      .signInWithPopup(provider)
-      .then((result) => {
-        // Handle successful login
-        const user = result.user;
-        console.log('Logged in user:', user);
-       
-        // Redirect to a new page or perform any other actions
-        history.push('/');
-      })
-      .catch((error) => {
-        // Handle login error
-        console.error('Login error:', error);
-        // Display an error message or perform any other error handling
-      });
-  };
+
   
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
