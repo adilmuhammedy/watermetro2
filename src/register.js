@@ -68,9 +68,7 @@ const Register = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     // Add your registration logic here
-  };
-
-
+  };  
   
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
@@ -182,6 +180,7 @@ const Register = () => {
         <button className="user" onClick={handleLoginClick}>
           Existing user? Login here
         </button>
+        <div className='goo'>
         <p className="or1">
   <span className="or-line1"></span>
   <span className="or-text1">or</span>
@@ -192,7 +191,7 @@ const Register = () => {
         </button>
       </div>
       </div>
-
+      </div>
   );
 };
 export default Register;

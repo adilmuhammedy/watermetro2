@@ -24,7 +24,7 @@
   width: 189px;
   height: 70px;
   left: 73px;
-  top: 130px;
+  top: 100px;
   font-family: 'Akshar';
   font-style: normal;
   font-weight: 700;
@@ -63,16 +63,15 @@
   letter-spacing: 0.05em;
   color: #000000;
 }
-
 .field2 {
-    position: absolute;
-    width: 300px;
-    height: 30px;
-    left: 450px;
-    top: 50px;
-    border: none; /* Remove border */
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add box-shadow */
+  position: absolute;
+  width: 300px;
+  height: 30px;
+  left: 450px;
+  top: 50px;
+  border: none; /* Remove border */
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add box-shadow */
   }
   
 
@@ -104,22 +103,16 @@
   letter-spacing: 0.05em;
   color: #000000;
 }
-
-
-    .field4 {
-        position:absolute;
-        width: 300px;
-        height: 30px;
-        left: 450px;
-        top: 190px;
-        border: none; /* Remove border */
-        border-radius: 10px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-       
-       
-      }
-      
-
+.field4 {
+  position:absolute;
+  width: 300px;
+  height: 30px;
+  left: 450px;
+  top: 190px;
+  border: none; /* Remove border */
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
 
 .conpassword {
   position: absolute;
@@ -148,136 +141,109 @@
 }
   
 .button{
-    position: absolute;
-width: 89px;
-height: 30px;
-left: 550px;
-top: 310px;
+  position: absolute;
+  width: 89px;
+  height: 30px;
+  left: 550px;
+  top: 310px;
 
-font-family: 'Literata';
-font-style: normal;
-font-weight: 400;
-font-size: 15px;
-line-height: 15px;
-/* identical to box height */
-cursor: pointer;
-letter-spacing: 0.05em;
-
-color: #FFFFFF;
-
-border-radius: 10px;
-border-color: #44C0AA;
-border-width: 0px;
-
-background-color: #44C0AA;
+  font-family: 'Literata';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 15px;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+  border-radius: 10px;
+  border-color: #44C0AA;
+  border-width: 0px;
+  background-color: #44C0AA;
 }
 .user{
-    position: absolute;
-    width: 200px;
-    height: 24px;
-    left: 565px;
-    top: 490px;
-    cursor: pointer;
-    font-family: 'Literata';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 13px;
-    line-height: 24px;
-    /* identical to box height */
-    border-color: #FFFFFF;
-    background-color: #FFFFFF;
-    border-width: 0px;
+  position: absolute;
+  width: 200px;
+  height: 24px;
+  left: 565px;
+  top: 460px;
+  cursor: pointer;
+  font-family: 'Literata';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 24px;
+  border-color: #FFFFFF;
+  background-color: #FFFFFF;
+  border-width: 0px;
+  letter-spacing: 0.02em;
+  color: #000000;
     
-    letter-spacing: 0.02em;
+}
+.or1 {
+  position: absolute;
+  top: 400px;
+  left: 560px;
+  width: 200px; 
+  font-size: 14px;
+  text-align: center;
+  color: #000000;
+}
     
-    color: #000000;
+.or-line1 {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: rgb(39, 38, 38);
+  margin-top: 10px;
+}
     
-    }
-    .or {
-      position: absolute;
-      top: 400px;
-      left: 560px;
+.or-text1 {
+  position: absolute;
+  top: -25px; 
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff;
+  padding: 0 5px;
+}
 
-      width: 200px; /* Adjust the width based on your needs */
-      font-size: 14px;
-      text-align: center;
-      color: #000000;
-    }
-    
-    .or-line {
-      position: relative;
-      display: block;
-      width: 100%;
-      height: 1px;
-      background-color: rgb(39, 38, 38);
-      margin-top: 10px;
-    }
-    
-
-    .or-text1 {
-      position: absolute;
-      top: 0px; /* Adjust the vertical position of the "OR" text */
-
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: #ffffff;
-      padding: 0 5px;
-    }
-    
-      .google {
-        position: absolute;
-        background-color: #4285F4;
-        color: #ffffff;
-        border-radius: 4px;
-        border: none;
-        left: 560px;
-        top: 450px;
-
-        width:200px;
-        padding: 10px;
-        font-size: 14px;
-        cursor: pointer;
-        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
+.google1 {
+  position: absolute;
+  background-color: #4285F4;
+  color: #ffffff;
+  border-radius: 4px;
+  border: none;
+  left: 560px;
+  top: 450px;
+  width:200px;
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
       
-      .google:hover,
-      .google:focus {
-        background-color: #d3bc89;
-
-        /* Add more styles for hover and focus states */
-        color: #fff;
-        /* Additional styles */
-        border-radius: 4px;
-      }
+.google1:hover,.google1:focus {
+  background-color: #d3bc89;
+  color: #fff;
+  border-radius: 4px;
+}
       
-      .google .google-icon {
-
-        width: 20px;
-        height: 20px;
-        margin-right: 8px;
-        background-image: url("https://dl.dropboxusercontent.com/s/y76omky5qwkj7fw/google-logo.png?dl=0");
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-    .goo{
-      position: relative;
-      left:70px;
-      top:200px;
-    
+.google1 .google-icon1 {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  background-image: url("https://dl.dropboxusercontent.com/s/y76omky5qwkj7fw/google-logo.png?dl=0");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.goo{
+  position: relative;
+  left:70px;
+  top:200px;
+}
       
-
-        position:absolute;
-        width: 20px;
-        height: 20px;
-        left:19px;
-        margin-right: 8px;
-        background-image: url("https://dl.dropboxusercontent.com/s/wxkx22gf01tygmn/google-logo.png?dl=0");
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-    
     
 
