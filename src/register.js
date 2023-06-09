@@ -12,6 +12,7 @@ const Register = () => {
   const [isUserSignedIn, setIsUserSignedIn] = useState(false);
   const [displayName, setDisplayName] = useState('');
   const [conpass, setConpass] = useState('');
+  const [profilePictureUrl, setProfilePictureUrl] = useState('');
   const history = useHistory();
   const firebaseConfig = {
     apiKey: "AIzaSyCGRG2r6MT-CoPN1d-UVrbwhbyWhg0VGyU",
@@ -34,6 +35,8 @@ const Register = () => {
         const displayName = user.displayName;
         const email = user.email;
         const photoURL = user.photoURL;
+        const profilePictureUrl = user.photoURL;
+        setProfilePictureUrl(profilePictureUrl);
         const emailVerified = user.emailVerified;
         console.log(displayName, email, photoURL, emailVerified);
         setDisplayName(displayName);
@@ -68,27 +71,7 @@ const Register = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     // Add your registration logic here
-  };
-
-  const provider = new firebase.auth.GoogleAuthProvider();
-  const handleGoogleLogin = () => {
-    firebase
-      .auth()
-      .signInWithPopup(provider)
-      .then((result) => {
-        // Handle successful login
-        const user = result.user;
-        console.log('Logged in user:', user);
-       
-        // Redirect to a new page or perform any other actions
-        history.push('/');
-      })
-      .catch((error) => {
-        // Handle login error
-        console.error('Login error:', error);
-        // Display an error message or perform any other error handling
-      });
-  };
+  };  
   
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
@@ -200,6 +183,7 @@ const Register = () => {
         <button className="user" onClick={handleLoginClick}>
           Existing user? Login here
         </button>
+        <div className='goo'>
         <p className="or1">
   <span className="or-line1"></span>
   <span className="or-text1">or</span>
@@ -210,7 +194,7 @@ const Register = () => {
         </button>
       </div>
       </div>
-
+      </div>
   );
 };
 export default Register;

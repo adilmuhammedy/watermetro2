@@ -1,24 +1,20 @@
 .Home {
   position: absolute;
-  width: 80%; /* Adjust the width as per your requirement */
+  width: 100%; 
+  object-fit: cover;
   height: 100%;
-  margin: 0 auto; /* Center the page horizontally */
+  margin: 0 auto; 
+  overflow-x: hidden;
 }
-
-
 .home{
-
   font-size: 150px;
   position: relative;
   left: 800px;
   color: black;
   top:10px;
   display: inline-block;
-  cursor: pointer;
-  
-  
+  cursor: pointer;  
 }
-
 .booktickets{
   color: black;
   font-size: 15px;
@@ -48,10 +44,10 @@
 }
 .logo{
   position: absolute;
-width: 130px;
-height: 130px;
-left: 20px;
-top: -26px;
+  width: 130px;
+  height: 130px;
+  left: 20px;
+  top: -26px;
 }
 .login{
   color: black;
@@ -63,13 +59,13 @@ top: -26px;
   cursor: pointer;
 }
 .rectangle {
-  position: relative; /* Change from absolute to relative */
+  position: relative;
   width: 180px;
   height: 100px;
-  margin-left: auto; /* Add margin-left and margin-right with auto */
+  margin-left: auto; 
   margin-right: auto;
   top: 80px;
-  background: #44C0AA;
+  background: #137BC7;
   
 }
 .homepagee{
@@ -80,29 +76,29 @@ top: -26px;
 .metro{
   position:relative;
   left:30px;
-  color:#44C0AA;
+  color:#585458b7;
   font:inherit;
   font-size: 22px;
+  font-weight: 700;
   font-family: 'Lato', sans-serif;
-
   text-shadow: #0d0f0f;
 
 }
 .heading{
   position:relative;
   left:30px;
-  color:#1289c0;
+  color:#44C0AA;
   font:inherit;
   font-family: 'Lato', sans-serif;
-
   top:-20px;
   width:550px;
   font-size: 1.675rem;
-  line-height: 2.25rem;
   font-weight: 700;
-  
+  line-height: 2.25rem;
 
+  
 }
+
 .descri{
   position: relative;
   top:-30px;
@@ -111,6 +107,7 @@ top: -26px;
   font-size: 18px;
   line-height: 30px;
 }
+
 .boat{
   position:absolute;
   width:800px;
@@ -119,12 +116,11 @@ top: -26px;
   left:100px;
   text-shadow: #0d0f0f;
   color:#1289c0;
-  font-size: 28px;background: linear-gradient(180deg, #0660b4, #15bbb0);
+  font-size: 28px;background: linear-gradient(180deg, #0660b4, #15bb97);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
-
 }
+
 .route{
   position:absolute;
   width:100px;
@@ -138,6 +134,7 @@ top: -26px;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .kms{
   position:absolute;
   width:160px;
@@ -149,18 +146,15 @@ top: -26px;
   font-size: 28px;
   background: linear-gradient(140deg, #04539d, #15bbb0);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-   
-
-  
+  -webkit-text-fill-color: transparent;  
 }
 
 .slide-container {
   position: relative;
-  width: 60%;
+  width: 48%;
   height:440px;
-  left:245px;
-  float:right;
+  left:750px;
+  float:center;
   margin-top: -155px;
   border-radius: 20px;
 }
@@ -176,7 +170,7 @@ top: -26px;
 
 .wave-animation {
   position: absolute;
-  top: 643px;
+  top: 670px;
   left: 0;
   width: 1540px;
   height: 53px;
@@ -202,7 +196,7 @@ top: -26px;
 
 .wave-animation2 {
   position: absolute;
-  top: 643px;
+  top: 670px;
   left: 0;
   width: 1540px;
   height: 53px;
@@ -227,7 +221,7 @@ top: -26px;
 }
 .wave-animation3 {
   position: absolute;
-  top: 643px;
+  top: 670px;
   left: 0;
   width: 1540px;
   height: 53px;
@@ -263,5 +257,86 @@ top: -26px;
   border-radius: 50%;
   cursor: pointer;
 }
-
+.aboutus{
+  position: relative;
+  top:45px;
+  left:100px;
+  width:900px;
+}
+.headin{
+  position: relative;
+  left:30px;
+  font-weight: 600;
+  color:#1289c0;
+  font-size: 38px;
+  background: linear-gradient(180deg, #0660b4, #15bbb0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.details{
+  position: absolute;
+  width:800px;
+  left:30px;
+  font-size: 16px;
+  top:60px;
+}
+.details1{
+  position: absolute;
+  width:700px;
+  left:650px;
+  top:390px;
+  font-size: 16px;
+}
+.imginside{
+  position: absolute;
+  left:850px;
+  top:80px;
+  width:500px;
+  height:250px;
+}
+.corpit{
+   position: relative;
+   left:40px;
+   top:250px;
+   width:600px;
+   height:390px;
+}
+.waterways{
+  position: relative;
+  top:740px;
+  left:440px;
+  font-size: 23px;
+  color: #065cad;
+}
+.line{
+  position: relative;
+  background-color: #15bbb0;
+  width:142%;
+  height:3px;
+  top:340px;
+  left:30px;
+}
+.routesdetails{
+  position: absolute;
+  top:890px;
+  left:30px;
+  width:1300px;
+}
+.mapp{
+  position: absolute;
+  top:1120px;
+  width:900px;
+  height:500px;
+  left:200px;
+  overflow: hidden;
+  object-fit: cover;
+}
+.downbar{
+  position: relative;
+  width:134%;
+  height:50px;
+  background-color:#065cad;
+  top:1108px;
+  left:-100px;
+}
 
