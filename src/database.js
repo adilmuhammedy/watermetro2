@@ -7,12 +7,13 @@ const options = {
   useNewUrlParser: true,
   useUnifiedTopology: true
 };
+const backendURL = "https://watermetro.onrender.com";
 // Enable CORS
 app.use(cors());
 // Parse JSON request bodies
 app.use(express.json());
 // Define the '/bookticket' route handler
-app.post('/bookticket', async (req, res) => {
+app.post('${backendURL}/bookticket', async (req, res) => {
   const { from, to, ticketType, nopass } = req.body;
   console.log("Form Data:", req.body);
   try {
@@ -46,7 +47,7 @@ app.post('/bookticket', async (req, res) => {
     return res.status(500).json({ message: 'Internal server error' });
   }
 });
-app.post('/confirmation', async (req, res) => {
+app.post('${backendURL}/confirmation', async (req, res) => {
   const { from, to, ticketType, nopass } = req.body;
   console.log("Form Data:", req.body);
   try {
@@ -82,7 +83,7 @@ app.post('/confirmation', async (req, res) => {
     return res.status(500).json({ message: 'Internal server error' });
   }
 });
-app.post('/create-payment-intent', async (req, res) => {
+app.post('${backendURL}/create-payment-intent', async (req, res) => {
   const { amount } = req.body;
   try {
     const paymentIntent = await stripe.paymentIntents.create({
