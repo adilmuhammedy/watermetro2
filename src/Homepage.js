@@ -71,6 +71,11 @@ function Home() {
   const handleLoginClick = () => {
     history.push('/login');
   }
+  const handleMetroClick=()=>{
+      window.location.href = 'http://localhost:3000/home.php'; // Redirect to another localhost
+    }
+   
+ 
 
   const Slideshow = () => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);  
@@ -102,7 +107,9 @@ function Home() {
       <header className="home-header">
         
         <h4 className="home" onClick={handleHomeClick}>HOME</h4>
+        <h4 className="metrorail" onClick={handleMetroClick}>METRO RAIL</h4>
         <h4 className="booktickets" onClick={handleBookTicketsClick}>BOOK TICKETS</h4>
+
         <h4 className="terminals" onClick={handleTerminalsClick}>TERMINALS</h4>
         <h4 className="faredetails" onClick={handleFareDetailsClick}>FARE DETAILS</h4>
         {!isUserSignedIn && (

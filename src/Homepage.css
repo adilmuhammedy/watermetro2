@@ -19,10 +19,20 @@
   color: black;
   font-size: 15px;
   position: relative;
-  left: 850px;
+  left: 800px;
   top:10px;
   display: inline-block;
   cursor: pointer;
+}
+.metrorail{
+  color: black;
+  font-size: 15px;
+  position: relative;
+  left: 830px;
+  top:10px;
+  display: inline-block;
+  cursor: pointer;
+ 
 }
 .terminals{
   color: black;
