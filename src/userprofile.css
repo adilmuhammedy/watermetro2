@@ -1,0 +1,33 @@
+.profile{
+  position: relative;
+  width: 680px;
+  height: 420px;
+  margin-left: auto; 
+  margin-right: auto;
+  margin-top: 100px;
+  top: 80px;
+  background: #f3f2f2;
+  box-shadow: inset;
+}
+.nname{
+  position: relative;
+  font-weight: 450;
+  top:60px;
+  left:60px;
+  font-size: 18px;
+}
+.eemail{
+  position: relative;
+  font-weight: 450;
+  top:50px;
+  left:60px;
+  font-size: 18px;
+}
+.pphone{
+  position: relative;
+  font-weight: 450;
+  top:40px;
+  left:60px;
+  font-size: 18px;
+}
+

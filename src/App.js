@@ -7,6 +7,7 @@ import Login from './login';
 import Register from './register';
 import FareDetails from './fare';
 import Confirmation from './confirmation';
+import Account from './userprofile';
 import Map1 from './Map1';
 import Map2 from './Map2';
 import Map3 from './Map3';
@@ -26,6 +27,7 @@ function App() {
         <Route path="/register" component={Register} />
         <Route path="/fare" component={FareDetails} />
         <Route path="/confirmation" component={Confirmation}/>
+        <Route path="/userprofile" component={Account} />
         <Route path="/Map1" component={Map1} />
         <Route path="/Map2" component={Map2} />
         <Route path="/Map3" component={Map3} />

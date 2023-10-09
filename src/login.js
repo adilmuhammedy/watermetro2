@@ -126,12 +126,13 @@ const Login = () => {
   const handleTerminalsClick = () => {
     history.push('/terminals');
   };
-  const handleMetroClick=()=>{
-    window.location.href = 'http://localhost:3000/home.php'; // Redirect to another localhost
-  };
+ 
   const handleLoginClick = () => {
     history.push('/login');
   };
+  const handleAccount= () => {
+    history.push('/userprofile');
+  }
   if (isUserSignedIn) {
     return null; // Render nothing if the user is signed in
   }
@@ -140,7 +141,6 @@ const Login = () => {
       <img src="https://dl.dropboxusercontent.com/s/zckq71jrgnv4yvf/logo.png?dl=0" className="logo" alt="watermetro" />
       <header className="home-header">
         <h4 className="home" onClick={handleHomeClick}>HOME</h4>
-        <h4 className="metrorail" onClick={handleMetroClick}>METRO RAIL</h4>
         <h4 className="booktickets" onClick={handleBookTicketsClick}>BOOK TICKETS</h4>
         <h4 className="terminals" onClick={handleTerminalsClick}>TERMINALS</h4>
         <h4 className="faredetails" onClick={handleFareDetailsClick}>FARE DETAILS</h4>
@@ -198,7 +198,7 @@ const Login = () => {
         </div>
         {isOpen && (
           <ul className="dropdown-menu">
-            <li>Account</li>
+            <li onClick={handleAccount}>Account</li>
             <li>Settings</li>
             <li onClick={handleSignOut}>Logout</li>
           </ul>

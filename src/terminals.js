@@ -73,12 +73,12 @@ const Terminals = () => {
   const handleFareDetailsClick = () => {
     history.push('/fare');
   };
-  const handleMetroClick=()=>{
-    window.location.href = 'http://localhost:3000/home.php'; // Redirect to another localhost
-  };
   const handleTerminalClick = (terminal) => {
     setActiveTerminal(terminal);
   };
+  const handleAccount= () => {
+    history.push('/userprofile');
+  }
   const renderTerminalDetails = () => {
     switch (activeTerminal) {
       case 'kakkanad':
@@ -291,7 +291,6 @@ const Terminals = () => {
       <header className="home-header">
         <img src='https://dl.dropboxusercontent.com/s/zckq71jrgnv4yvf/logo.png?dl=0' className="logo" alt="watermetro" />
         <h4 className="home" onClick={handleHomeClick}>HOME</h4>
-        <h4 className="metrorail" onClick={handleMetroClick}>METRO RAIL</h4>
         <h4 className="booktickets" onClick={handleBookTicketsClick}>BOOK TICKETS</h4>
         <h4 className="terminals" onClick={handleTerminalsClick}>TERMINALS</h4>
         <h4 className="faredetails" onClick={handleFareDetailsClick}>FARE DETAILS</h4>
@@ -329,7 +328,7 @@ const Terminals = () => {
         </div>
         {isOpen && (
           <ul className="dropdown-menu">
-            <li>Account</li>
+            <li onClick={handleAccount}>Account</li>
             <li>Settings</li>
             <li onClick={handleSignOut}>Logout</li>
           </ul>
